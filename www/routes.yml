@@ -1,0 +1,19 @@
+/:
+  controller: "Default"
+  action: "default"
+
+/ajout-utilisateur:
+  controller: "User"
+  action: "register"
+
+/utilisateur:
+  controller: "User"
+  action: "default"
+
+/connexion:
+  controller: "User"
+  action: "login"
+
+/oublipwd:
+  controller: "User"
+  action: "forgotPassword"
