@@ -1,7 +1,7 @@
 <?php
 function myAutoloader($class)
 {
-    $class = str_replace('App', '', $class);
+    $class = str_replace('HotelFactory', '', $class);
 
     $class = str_replace('\\', '/', $class);
 
