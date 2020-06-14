@@ -1,0 +1,72 @@
+/:
+  controller: Home
+  action: default
+
+/home:
+  controller: Home
+  action: default
+
+/se-connecter:
+  controller: User
+  action: login
+
+/se-deconnecter:
+  controller: User
+  action: logout
+
+/s-inscrire:
+  controller: User
+  action: register
+
+/se-connecter/verifications:
+  controller: User
+  action: logCheck
+
+/vous-etes-perdu:
+  controller: Errors
+  action: quatreCentQuatre
+
+#Connexion client HF / Dashboard Client
+/settings:
+  controller: DashboardUser
+  action: default
+
+/settings/mes-pages:
+  controller: DashboardUser
+  action: userPages
+
+/settings/apprences:
+  controller: DashboardUser
+  action: userDesign
+
+/settings/parametres:
+  controller: DashboardUser
+  action: userSettings
+
+
+#Connexion admin HF / Dashboard Admin
+
+/dashboard:
+  controller: DashboardAdmin
+  action: default
+
+/dashboard/mes-pages:
+  controller: DashboardAdmin
+  action: adminPages
+
+/dashboard/apparences:
+  controller: DashboardAdmin
+  action: adminDesign
+
+/dashboard/commentaires:
+  controller: DashboardAdmin
+  action: adminComments
+
+
+/dashboard/permissions:
+  controller: DashboardAdmin
+  action: adminPermissions
+
+/dashboard/parametres:
+  controller: DashboardAdmin
+  action: adminSettings
