@@ -17,14 +17,12 @@ class Model
         $className = get_class($this);
         $articleObj = new $className;
 
-        foreach ( $row as $key => $value) {
+        foreach ( $donnees as $key => $value) {
             $method = 'set'.$key;
-
             if (method_exists($articleObj, $method)) {
                 $articleObj->$method($value);
             }
         }
-
         return $articleObj;
     }
 }

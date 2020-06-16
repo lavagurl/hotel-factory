@@ -1,6 +1,9 @@
 <?php
 
 namespace HotelFactory\Controllers;
+use HotelFactory\Forms\RegisterForm;
+use HotelFactory\Managers\UserManager;
+use HotelFactory\Core\Validator;
 use HotelFactory\Models\User;
 use HotelFactory\Core\Helper;
 use HotelFactory\Core\View;
@@ -21,9 +24,25 @@ class UserController
 
     public function registerAction()
     {
-        $configFormUser = User::getRegisterForm();
+
+        $configFormUser = RegisterForm::getForm();
         $myView = new View("register", "front");
         $myView->assign("configFormUser", $configFormUser);
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $errors = Validator::checkForm($configFormUser ,$_POST);
+            if($errors == null)
+            {
+                $user = new User();
+                $user = $user->hydrate($_POST);
+                $userManager = new UserManager();
+                $userManager->save($user);
+            }
+            else
+            {
+                print_r($errors);
+            }
+        }
     }
 
     public function loginAction()
@@ -53,7 +72,7 @@ class UserController
       $infoUser = $params['POST'];
       $user = new User();
 
-      $errors = Validator::checkForm($infoContact);
+      $errors = Validator::checkForm($infoUser);
 
       if(count($errors) > 0){
         $user->setEmail($infoUser['email']);

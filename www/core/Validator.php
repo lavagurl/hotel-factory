@@ -4,7 +4,7 @@ namespace HotelFactory\Core;
 
 class Validator
 {
-  public static function checkForm($datas){
+  public static function checkForm($configForm, $datas){
     $errosMsg = [];
 
     foreach ($datas as $key => $value) {
@@ -45,7 +45,7 @@ class Validator
     return strlen(trim($string))<=$length;
   }
 
-  public static function minString($string, $lenght){
+  public static function minString($string, $length){
     return strlen(trim($string))>=$length;
   }
 
@@ -61,7 +61,7 @@ class Validator
   }
 
   public static function checkName($name){
-    $corret = true;
+    $correct = true;
     if(strlen($name)>0){
 
     }
@@ -69,13 +69,13 @@ class Validator
   }
 
   public static function checkFirstname($firstname){
-    $corret = true;
+    $correct = true;
 
     return $correct;
   }
 
   public static function checkBirthdate($birthdate){
-    $corret = true;
+    $correct = true;
 
     return $correct;
   }

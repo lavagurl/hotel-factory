@@ -15,6 +15,12 @@ function myAutoloader($class)
       include "models/".$class.".php";
   } elseif (file_exists("services/".$class.".php")) {
       include "services/".$class.".php";
+  } elseif (file_exists("managers/".$class.".php")) {
+      include "managers/".$class.".php";
+  } elseif (file_exists("forms/".$class.".php")) {
+      include "forms/".$class.".php";
+  } elseif (file_exists("connection/".$class.".php")) {
+      include "connection/".$class.".php";
   } elseif (file_exists($class.".php")){
       include $class.".php";
   }
