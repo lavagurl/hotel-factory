@@ -11,7 +11,6 @@ class Model
         return $property;
     }
 
-
     public function hydrate(array $donnees)
     {
         $className = get_class($this);
