@@ -18,6 +18,7 @@ class Model
         $articleObj = new $className;
 
         foreach ( $donnees as $key => $value) {
+
             $method = 'set'.$key;
             if (method_exists($articleObj, $method)) {
                 $articleObj->$method($value);

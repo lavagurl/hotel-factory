@@ -24,7 +24,7 @@ class RegisterForm {
                     "required"=>true,
                     "min-length"=>2,
                     "max-length"=>50,
-                    "errorMsg"=>"Votre prénom doit faire entre 2 et 50 caractères"
+                    "errorMsg"=>"Votre prénom doit faire entre 1 et 50 caractères et ne doit pas contenir de caractères spéciaux ni de nombres"
                 ],
                 "name"=>[
                     "type"=>"text",
@@ -34,7 +34,7 @@ class RegisterForm {
                     "required"=>true,
                     "min-length"=>2,
                     "max-length"=>100,
-                    "errorMsg"=>"Votre nom doit faire entre 2 et 100 caractères"
+                    "errorMsg"=>"Votre nom doit faire entre 1 et 100 caractères et ne doit pas contenir de caractères spéciaux ni de nombres"
                 ],
                 "email"=>[
                     "type"=>"email",
@@ -51,7 +51,7 @@ class RegisterForm {
                     "class"=>"form-control form-control-user",
                     "id"=>"",
                     "required"=>true,
-                    "errorMsg"=>"Votre mot de passe doit faire entre 6 et 20 caractères avec une minuscule et une majuscule"
+                    "errorMsg"=>"Votre mot de passe doit faire entre 8 et 20 caractères avec une minuscule, une majuscule, un nombre et un caractère spécial"
                 ],
                 "passwordConfirm"=>[
                     "type"=>"password",
@@ -75,7 +75,7 @@ class RegisterForm {
                     "class"=>"form-control form-control-user",
                     "id"=>"",
                     "required"=>true,
-                    "errorMsg"=>"Date invalide"
+                    "errorMsg"=>"Vous devez avoir plus de 18 ans pour vous inscrire"
                 ]
             ]
         ];

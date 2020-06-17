@@ -2,83 +2,71 @@
 
 namespace HotelFactory\Core; 
 
+use function Sodium\compare;
+
 class Validator
 {
-  public static function checkForm($configForm, $datas){
-    $errosMsg = [];
+    public function checkForm($configForm, $data)
+    {
+        $errosMsg = [];
 
-    foreach ($datas as $key => $value) {
-      if($key == 'email' && !self::checkEmail($value)){
-        $errosMsg['email'] = "Format de l'email incorrect";
-      }
-
-      if($key == 'password'){
-        $password = $value;
-        if(!self::checkPassword($value)){
-          $errosMsg['password'] = "Format du mot de passe incorrect";
+        if (count($configForm["fields"]) == count($data)) {
+            foreach ($configForm["fields"] as $key => $config) {
+                $this->$key = $data[$key];
+                //Vérifie que l'on a bien les champs attendus
+                //Vérifier les required
+                if (!array_key_exists($key, $data) || ($config["required"] && empty($data[$key]))) {
+                    return ["Tentative de hack !!!"];
+                }
+                $method = 'check'.ucfirst($key);
+                if (method_exists(get_called_class(),$method))
+                {
+                    if (!$this->$method($data[$key])) {
+                        $errosMsg[$key] = $config["errorMsg"];
+                    }
+                }
+            }
         }
-      }
-
-      if($key == 'passwordConf'){
-        if($password != $value){
-          $errorsMsg['passwordConf'] = "Mots de passe différents";
-        }
-      }
-
-      if($key == 'name' && !self::checkName($value)){
-        $errosMsg['name'] = "Champs vide";
-      }
-
-      if($key == 'firstname' && !self::checkFirstname($value)){
-        $errosMsg['firstname'] = "Champs vide";
-      }
-
-      if($key == 'birthdate' && !self::checkBirthdate($value)){
-        $errosMsg['birthdate'] = "Date invalide";
-      }
+        return $errosMsg;
     }
 
-    return $errosMsg;
-  }
-
-  public static function maxString($string, $length){
-    return strlen(trim($string))<=$length;
-  }
-
-  public static function minString($string, $length){
-    return strlen(trim($string))>=$length;
-  }
-
-  public static function checkEmail($email){
-
-  }
-
-  public static function checkPassword($password){
-    return strlen($password)>=6 && strl($password)<=18 &&
-    preg_match("/[a-z]/", $password) &&
-    preg_match("/[A-Z]/", $password) &&
-    preg_match("/[0-9]/", $password);
-  }
-
-  public static function checkName($name){
-    $correct = true;
-    if(strlen($name)>0){
-
+    public function checkFirstname($firstname)
+    {
+        if (!preg_match("#^[\p{Latin}' -]+$#u", $firstname) || count_chars($firstname) < 50)
+            return false;
+        return true;
     }
-    return $correct;
-  }
+    public function checkName($name)
+    {
+        if (!preg_match("#^[\p{Latin}' -]+$#u", $name) || count_chars($name) < 100)
+            return false;
+        return true;
+    }
+    private function checkEmail($email)
+    {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+    public function checkPassword($password)
+    {
+        return preg_match('#(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,20}$#', $password);
+    }
 
-  public static function checkFirstname($firstname){
-    $correct = true;
+    public function checkPasswordConfirm($passwordConfirm)
+    {
+        return $this->password == $passwordConfirm;
+    }
 
-    return $correct;
-  }
-
-  public static function checkBirthdate($birthdate){
-    $correct = true;
-
-    return $correct;
-  }
+    public function checkCaptcha($captcha)
+    {
+        return strtolower($captcha) == $_SESSION["captcha"];
+    }
+    public function checkBirthdate($birthdate)
+    {
+        $birthdate = new \DateTime($birthdate);
+        $date = new \DateTime("now");
+        $date->modify('-18 years');
+        return $date>= $birthdate;
+    }
 
 
 

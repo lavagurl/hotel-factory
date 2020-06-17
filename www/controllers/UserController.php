@@ -30,8 +30,9 @@ class UserController
         $myView->assign("configFormUser", $configFormUser);
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $errors = Validator::checkForm($configFormUser ,$_POST);
-            if($errors == null)
+            $validator = new Validator();
+            $errors = $validator->checkForm($configFormUser ,$_POST);
+            if(empty($errors))
             {
                 $user = new User();
                 $user = $user->hydrate($_POST);
