@@ -1,6 +1,7 @@
 <?php
 
 namespace HotelFactory\Controllers;
+use HotelFactory\Forms\LoginForm;
 use HotelFactory\Forms\RegisterForm;
 use HotelFactory\Managers\UserManager;
 use HotelFactory\Core\Validator;
@@ -38,6 +39,7 @@ class UserController
                 $user = $user->hydrate($_POST);
                 $userManager = new UserManager();
                 $userManager->save($user);
+                header('Location: /se-connecter');
             }
             else
             {
@@ -48,8 +50,13 @@ class UserController
 
     public function loginAction()
     {
-        $_SESSION['status'] = "1";
+        $configFormUser = LoginForm::getForm();
         $myView = new View("login", "front");
+        $myView->assign("configFormUser", $configFormUser);
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+
+        }
     }
 
     public function logCheckAction(){

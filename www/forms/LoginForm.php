@@ -1,0 +1,39 @@
+<?php
+
+namespace HotelFactory\Forms;
+use HotelFactory\Core\Helper;
+
+class LoginForm {
+
+    public static function getForm(){
+        return [
+            "config"=>[
+                "method"=>"POST",
+                "action"=>Helper::getUrl("User", "logCheck"),
+                "class"=>"User",
+                "id"=>"formLoginUser",
+                "submit"=>"Se connecter"
+            ],
+
+            "fields"=>[
+                "email"=>[
+                    "type"=>"email",
+                    "placeholder"=>"Votre email",
+                    "class"=>"form-control form-control-user",
+                    "id"=>"",
+                    "required"=>true,
+                    "uniq"=>["table"=>"users","column"=>"email"],
+                    "errorMsg"=>"identifiant ou mot de passe incorrect"
+                ],
+                "password"=>[
+                    "type"=>"password",
+                    "placeholder"=>"Votre mot de passe",
+                    "class"=>"form-control form-control-user",
+                    "id"=>"",
+                    "required"=>true,
+                    "errorMsg"=>"identifiant ou mot de passe incorrect"
+                ],
+            ]
+        ];
+    }
+}

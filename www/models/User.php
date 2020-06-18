@@ -27,7 +27,7 @@ class User extends Model
 
     public function setEmail($email)
     {
-        $this->email=$email;
+        $this->email=strtolower($email);
     }
 
     public function setPassword($password)
@@ -37,12 +37,12 @@ class User extends Model
 
     public function setName($name)
     {
-        $this->name=$name;
+        $this->name=strtoupper($name);
     }
 
     public function setFirstname($firstname)
     {
-        $this->firstname=$firstname;
+        $this->firstname=ucfirst(strtolower($firstname));
     }
 
     public function setBirthdate($birthdate)

@@ -43,7 +43,7 @@ class RegisterForm {
                     "id"=>"",
                     "required"=>true,
                     "uniq"=>["table"=>"users","column"=>"email"],
-                    "errorMsg"=>"Le format de votre email ne correspond pas"
+                    "errorMsg"=>"Adresse mail invalide ou déja utilisée"
                 ],
                 "password"=>[
                     "type"=>"password",

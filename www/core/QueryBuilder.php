@@ -2,7 +2,7 @@
 
 namespace HotelFactory\Core; 
 
-class QueryBuilder extends DB
+class QueryBuilder extends Manager
 {
     private $query;
     private $where = "";
@@ -10,13 +10,12 @@ class QueryBuilder extends DB
     private $limit = "";
     private $groupBy = "";
     private $selector = "";
-
-    public function __construct()
+    public function __construct($class,$table)
     {
-        parent::__construct();
+        parent::__construct($class,$table);
     }
 
-    public function select($columns)
+    public function querySelect($columns)
     {
         $this->selector .= "SELECT ";
 
@@ -37,28 +36,54 @@ class QueryBuilder extends DB
         }
         return $this;
     }
+//    public function queryFrom()
+//    {
+//        $this->selector .= "FROM ".$this->table . " ";
+//    }
+//    public function queryManyFrom($columns)
+//    {
+//        $this->selector .= "FROM ";
+//        if (is_array($columns)) {
+//            $lastElement = count($columns);
+//            $i = 1;
+//            foreach ($columns as $column) {
+//                $column = DB_PREFIXE.$column;
+//                $this->selector .= $column;
+//                if ($i != $lastElement) {
+//                    $this->selector .= ", ";
+//                } else {
+//                    $this->selector .= " ";
+//                }
+//                $i++;
+//            }
+//        } else {
+//            $this->selector .= DB_PREFIXE.$columns . " ";
+//        }
+//        return $this;
+//    }
 
     public function update($table)
     {
+        $this->table = $table;
         $this->selector .= "UPDATE " . $table . " ";
         return $this;
     }
 
-    public function findAll($table)
+    public function queryFindAll($table)
     {
         $this->selector = "SELECT *";
 
         return $this;
     }
 
-    public function count($table)
+    public function queryCount($table)
     {
         $this->selector = "SELECT COUNT(*)";
 
         return $this;
     }
 
-    public function where($column, $operator, $value = null)
+    public function queryWhere($column, $operator, $value = null)
     {
         if (!isset($value)) {
             $value = $operator;
@@ -70,31 +95,31 @@ class QueryBuilder extends DB
     }
 
 
-    public function like($column, $value = null)
+    public function queryLike($column, $value = null)
     {
         $this->where .= " " . $column . " LIKE CONCAT('%',:" . $value . ",'%') ";
         return $this;
     }
 
-    public function orderBy($column, $order)
+    public function queryOrderBy($column, $order)
     {
         $this->order .= " " . $column . " " . $order . " ";
         return $this;
     }
 
-    public function groupBy($group)
+    public function queryGroupBy($group)
     {
         $this->groupBy .= " " . $group . " ";
         return $this;
     }
 
-    public function limit($limit)
+    public function queryLimit($limit)
     {
         $this->limit .= " ".$limit." ";
         return $this;
     }
 
-    public function get()
+    public function queryGget()
     {
         if (!isset($this->selector) || !isset($this->table)) {
             return false;
@@ -107,13 +132,12 @@ class QueryBuilder extends DB
                 . (!empty($this->order) ? "ORDER BY" . $this->order : "")
                 . (!empty($this->limit) ? "LIMIT" . $this->limit : "");
 
-            $query = $this->pdo->prepare($this->query);
-            $query->execute();
-            return $query->fetchAll();
+            $result = $this->connection->query($this->query);
+            return $result->getValueResult();
         }
     }
 
-    public function save()
+    public function querySave()
     {
         $propChild = get_object_vars($this);
         $propDB = get_class_vars(get_class());
@@ -139,7 +163,7 @@ class QueryBuilder extends DB
         return $queryPrepared->execute($columnsData);
     }
 
-    public function delete($column, $comp, $val = null){
+    public function queryDelete($column, $comp, $val = null){
         if (!isset($this->table)) {
             return false;
         } else {
@@ -153,7 +177,7 @@ class QueryBuilder extends DB
         }
     }
 
-    public function deleteAll(){
+    public function queryDeleteAll(){
         if(!isset($this->table)){
             return false;
         } else {
@@ -165,6 +189,6 @@ class QueryBuilder extends DB
 
     public function getQuery()
     {
-        return $this;
+        return $this->selector;
     }
 }
