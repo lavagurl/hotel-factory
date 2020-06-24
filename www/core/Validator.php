@@ -50,7 +50,6 @@ class Validator
         $requete->querySelect("email");
         $requete->queryWhere("email","=", $email);
         $result = $requete->queryGget();
-        echo ($result == $email);
         if($result == $email)
             return false;
         return filter_var($email, FILTER_VALIDATE_EMAIL);

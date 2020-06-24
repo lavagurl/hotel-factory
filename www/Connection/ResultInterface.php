@@ -1,6 +1,6 @@
 <?php 
 
-namespace HotelFactory\Core\Connection;
+namespace HotelFactory\Connection;
 
 interface ResultInterface 
 {

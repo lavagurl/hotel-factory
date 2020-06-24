@@ -55,7 +55,13 @@ class UserController
         $myView->assign("configFormUser", $configFormUser);
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
+            $_POST['password'] = md5($_POST['password']);
+            $userManager = new UserManager();
+            $user = $userManager->findBy($_POST);
+            if(!empty($user))
+            {
 
+            }
         }
     }
 

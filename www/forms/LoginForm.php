@@ -9,7 +9,7 @@ class LoginForm {
         return [
             "config"=>[
                 "method"=>"POST",
-                "action"=>Helper::getUrl("User", "logCheck"),
+                "action"=>Helper::getUrl("User", "login"),
                 "class"=>"User",
                 "id"=>"formLoginUser",
                 "submit"=>"Se connecter"

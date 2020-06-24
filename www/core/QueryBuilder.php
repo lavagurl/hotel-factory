@@ -89,6 +89,10 @@ class QueryBuilder extends Manager
             $value = $operator;
             $operator = "=";
         }
+        if(!empty($this->where))
+        {
+            $this->where.= " AND ";
+        }
         $this->where .= " " . $column . " " . $operator;
         $this->where .= (is_int($value)) ? " " . $value : " '".$value."'";
         return $this;
@@ -131,7 +135,6 @@ class QueryBuilder extends Manager
                 . (!empty($this->groupBy) ? "GROUP BY" . $this->groupBy : "")
                 . (!empty($this->order) ? "ORDER BY" . $this->order : "")
                 . (!empty($this->limit) ? "LIMIT" . $this->limit : "");
-
             $result = $this->connection->query($this->query);
             return $result->getValueResult();
         }
