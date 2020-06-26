@@ -137,14 +137,9 @@ class Manager
         $rows = $result->getArrayResult();
 echo (count($rows[0]));
         foreach($rows as $row) {
-            print_r($row);
             $object = new $this->class();
             array_push($results, $object->hydrate($row));
         }
-
-        echo ("<pre>");
-        print_r($rows[0]);
-        echo ("</pre>");
         return $results;
 
     }

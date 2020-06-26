@@ -58,6 +58,8 @@ class UserController
             $_POST['password'] = md5($_POST['password']);
             $userManager = new UserManager();
             $user = $userManager->findBy($_POST);
+            echo ("gloups");
+            print_r($user);
             if(!empty($user))
             {
 

@@ -22,7 +22,6 @@ class LoginForm {
                     "class"=>"form-control form-control-user",
                     "id"=>"",
                     "required"=>true,
-                    "uniq"=>["table"=>"users","column"=>"email"],
                     "errorMsg"=>"identifiant ou mot de passe incorrect"
                 ],
                 "password"=>[

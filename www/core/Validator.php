@@ -19,10 +19,9 @@ class Validator
                 if (!array_key_exists($key, $data) || ($config["required"] && empty($data[$key]))) {
                     return ["Tentative de hack !!!"];
                 }
-                $method = 'check'.ucfirst($key);
-                if (method_exists(get_called_class(),$method))
-                {
-                    if (!$this->$method($data[$key])) {
+                $method = 'check' . ucfirst($key);
+                if (method_exists(get_called_class(), $method)) {
+                    if (!$this->$method($data[$key], $config)) {
                         $errosMsg[$key] = $config["errorMsg"];
                     }
                 }
@@ -31,55 +30,66 @@ class Validator
         return $errosMsg;
     }
 
-    public function checkFirstname($firstname)
+    private function checkFirstname($firstname)
     {
         if (!preg_match("#^[\p{Latin}' -]+$#u", $firstname) || count_chars($firstname) < 50)
             return false;
         return true;
     }
-    public function checkName($name)
+
+    private function checkName($name)
     {
         if (!preg_match("#^[\p{Latin}' -]+$#u", $name) || count_chars($name) < 100)
             return false;
         return true;
     }
-    private function checkEmail($email)
+
+    private function checkEmail($email, $config)
     {
-        $result = "";
-        $requete = new QueryBuilder(User::class, 'user');
-        $requete->querySelect("email");
-        $requete->queryWhere("email","=", $email);
-        $result = $requete->queryGget();
-        if($result == $email)
-            return false;
+        if(array_key_exists("uniq",$config))
+            if(!$this->uniq($email,$config["uniq"]))
+                return false;
+
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
-    public function checkPassword($password)
+
+    private function checkPassword($password)
     {
         return preg_match('#(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,20}$#', $password);
     }
 
-    public function checkPasswordConfirm($passwordConfirm)
+    private function checkPasswordConfirm($passwordConfirm)
     {
         return $this->password == $passwordConfirm;
     }
 
-    public function checkCaptcha($captcha)
+    private function checkCaptcha($captcha)
     {
         return strtolower($captcha) == $_SESSION["captcha"];
     }
-    public function checkBirthdate($birthdate)
+
+    private function checkBirthdate($birthdate)
     {
         $birthdate = new \DateTime($birthdate);
         $date = new \DateTime("now");
         $date->modify('-18 years');
-        return $date>= $birthdate;
+        return $date >= $birthdate;
     }
 
+    private function uniq($data,$table)
+    {
+        $requete = new QueryBuilder(User::class, $table["table"]);
+        $requete->querySelect($table["column"]);
+        $requete->queryWhere($table["column"], "=", $data);
+        $result = $requete->queryGget();
+        if($result == $data)
+            return false;
+        return true;
+    }
 
 
 }
 
 
 
-?>
+
