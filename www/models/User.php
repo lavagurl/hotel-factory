@@ -12,6 +12,7 @@ class User extends Model
     protected $firstname;
     protected $birthdate;
     protected $creation_date;
+    protected $id_hf_role;
 
 //    public function __construct()
 //    {
@@ -50,9 +51,13 @@ class User extends Model
         $this->birthdate=$birthdate;
     }
 
-    public function setCreationDate($creation_date)
+    public function setCreation_date($creation_date)
     {
         $this->creation_date=$creation_date;
+    }
+    public function setId_hf_role($id_hf_role)
+    {
+        $this->id_hf_role=$id_hf_role;
     }
 
       /* GETTERS */
@@ -87,9 +92,13 @@ class User extends Model
       return $this->birthdate;
     }
 
-    public function getCreationDate()
+    public function getCreation_date()
     {
       return $this->creation_date;
+    }
+    public function getId_hf_role()
+    {
+        return $this->id_hf_role;
     }
 }
 

@@ -135,7 +135,6 @@ class Manager
         //echo($sql);
         $result = $this->connection->query($sql, $params);
         $rows = $result->getArrayResult();
-echo (count($rows[0]));
         foreach($rows as $row) {
             $object = new $this->class();
             array_push($results, $object->hydrate($row));

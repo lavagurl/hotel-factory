@@ -25,7 +25,6 @@ class UserController
 
     public function registerAction()
     {
-
         $configFormUser = RegisterForm::getForm();
         $myView = new View("register", "front");
         $myView->assign("configFormUser", $configFormUser);
@@ -39,7 +38,7 @@ class UserController
                 $user = $user->hydrate($_POST);
                 $userManager = new UserManager();
                 $userManager->save($user);
-                header('Location: /se-connecter');
+                Helper::redirectTo("User","login");
             }
             else
             {
@@ -53,17 +52,25 @@ class UserController
         $configFormUser = LoginForm::getForm();
         $myView = new View("login", "front");
         $myView->assign("configFormUser", $configFormUser);
-        if($_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            $_POST['password'] = md5($_POST['password']);
-            $userManager = new UserManager();
-            $user = $userManager->findBy($_POST);
-            echo ("gloups");
-            print_r($user);
-            if(!empty($user))
-            {
-
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $validator = new Validator();
+            $errors = $validator->checkForm($configFormUser, $_POST);
+            if (empty($errors)) {
+                $_POST['password'] = md5($_POST['password']);
+                $userManager = new UserManager();
+                $user = $userManager->findBy($_POST);
+                if (count($user) == 1) {
+                    $_SESSION['id'] = $user[0]->getId();
+                    $_SESSION['role'] = $user[0]->getId_hf_role();
+                    if ($_SESSION['role'] == 1)
+                        Helper::redirectTo('DashboardAdmin', 'default');
+                    elseif ($_SESSION['role'] == 2)
+                         Helper::redirectTo('DashboardUser', 'default');
+                } else
+                    echo("identifiant ou mot de passe incorrect");
             }
+            else
+                echo("identifiant ou mot de passe incorrect");
         }
     }
 

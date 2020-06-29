@@ -1,6 +1,7 @@
 <?php
 
 namespace HotelFactory\Controllers;
+use HotelFactory\Core\Helper;
 use HotelFactory\Core\View;
 
 class DashboardUserController
@@ -8,11 +9,8 @@ class DashboardUserController
 
   public function defaultAction()
   {
-    if($_SESSION['role'] == "2"){
-      $myView = new View("user/dashboard/home", "back");
-    }else{
-      header('Location: /vous-etes-perdu');
-    }
+    Helper::checkRole(2);
+    $myView = new View("user/dashboard/home", "back");
 
   }
 
