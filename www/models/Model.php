@@ -1,6 +1,6 @@
 <?php
 
-namespace HotelFactory\Models; 
+namespace HotelFactory\models;
 
 class Model
 {

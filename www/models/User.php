@@ -1,7 +1,7 @@
 <?php
 
-namespace HotelFactory\Models;
-use HotelFactory\Core\Helper;
+namespace HotelFactory\models;
+use HotelFactory\core\Helper;
 
 class User extends Model
 {
@@ -11,8 +11,8 @@ class User extends Model
     protected $name;
     protected $firstname;
     protected $birthdate;
-    protected $creation_date;
-    protected $id_hf_role;
+    protected $creationDate;
+    protected $idHfRole;
 
 //    public function __construct()
 //    {
@@ -51,13 +51,13 @@ class User extends Model
         $this->birthdate=$birthdate;
     }
 
-    public function setCreation_date($creation_date)
+    public function setCreationDate($creationDate)
     {
-        $this->creation_date=$creation_date;
+        $this->creationDate=$creationDate;
     }
-    public function setId_hf_role($id_hf_role)
+    public function setIdHfRole($idHfRole)
     {
-        $this->id_hf_role=$id_hf_role;
+        $this->idHfRole=$idHfRole;
     }
 
       /* GETTERS */
@@ -92,13 +92,13 @@ class User extends Model
       return $this->birthdate;
     }
 
-    public function getCreation_date()
+    public function getCreationDate()
     {
-      return $this->creation_date;
+      return $this->creationDate;
     }
-    public function getId_hf_role()
+    public function getIdHfRole()
     {
-        return $this->id_hf_role;
+        return $this->idHfRole;
     }
 }
 

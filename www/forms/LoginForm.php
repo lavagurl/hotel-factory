@@ -1,7 +1,7 @@
 <?php
 
-namespace HotelFactory\Forms;
-use HotelFactory\Core\Helper;
+namespace HotelFactory\forms;
+use HotelFactory\core\Helper;
 
 class LoginForm {
 

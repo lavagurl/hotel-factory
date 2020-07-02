@@ -1,7 +1,7 @@
 <?php
 
-namespace HotelFactory\Controllers;
-use HotelFactory\Core\View;
+namespace HotelFactory\controllers;
+use HotelFactory\core\View;
 
 class ErrorsController
 {

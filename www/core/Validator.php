@@ -1,8 +1,8 @@
 <?php
 
-namespace HotelFactory\Core; 
+namespace HotelFactory\core;
 
-use HotelFactory\Models\User;
+use HotelFactory\models\User;
 use function Sodium\compare;
 
 class Validator

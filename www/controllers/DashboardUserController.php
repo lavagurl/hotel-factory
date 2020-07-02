@@ -1,8 +1,8 @@
 <?php
 
-namespace HotelFactory\Controllers;
-use HotelFactory\Core\Helper;
-use HotelFactory\Core\View;
+namespace HotelFactory\controllers;
+use HotelFactory\core\Helper;
+use HotelFactory\core\View;
 
 class DashboardUserController
 {

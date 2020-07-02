@@ -1,10 +1,10 @@
 <?php
 
-namespace HotelFactory\Core; 
+namespace HotelFactory\core;
 
-use HotelFactory\Connection\BDDInterface;
-use HotelFactory\Connection\PDOConnection;
-use HotelFactory\Models\Model;
+use HotelFactory\connection\BDDInterface;
+use HotelFactory\connection\PDOConnection;
+use HotelFactory\models\Model;
 
 class Manager
 {
@@ -58,7 +58,7 @@ class Manager
             $sql = "UPDATE ".$this->table." SET ".implode(",", $sqlUpdate)." WHERE id=:id;";
         }
         //echo($sql);
-        echo("<br/>");
+        //echo("<br/>");
         //print_r($params);
         $this->connection->query($sql, $params);
 

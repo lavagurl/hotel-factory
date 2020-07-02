@@ -1,8 +1,8 @@
 <?php 
-namespace HotelFactory\Managers;
+namespace HotelFactory\managers;
 
-use HotelFactory\Core\Manager;
-use HotelFactory\Models\User;
+use HotelFactory\core\Manager;
+use HotelFactory\models\User;
 
 class UserManager extends Manager {
 

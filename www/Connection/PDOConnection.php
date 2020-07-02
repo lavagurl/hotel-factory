@@ -1,6 +1,6 @@
 <?php
 
-namespace HotelFactory\Connection;
+namespace HotelFactory\connection;
 
 
 class PDOConnection implements BDDInterface

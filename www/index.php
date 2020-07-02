@@ -3,28 +3,17 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 session_start();
 
-use HotelFactory\Core\ConstantLoader;
+use HotelFactory\core\ConstantLoader;
 
 //include_once 'autoloader.php';
 function myAutoloader($class)
 {
-  $class = explode("\\",$class)[count(explode("\\",$class))-1];
-  if (file_exists("core/".$class.".php")) {
-      include "core/".$class.".php";
-  } elseif (file_exists("models/".$class.".php")) {
-      include "models/".$class.".php";
-  } elseif (file_exists("services/".$class.".php")) {
-      include "services/".$class.".php";
-  } elseif (file_exists("managers/".$class.".php")) {
-      include "managers/".$class.".php";
-  } elseif (file_exists("forms/".$class.".php")) {
-      include "forms/".$class.".php";
-  } elseif (file_exists("connection/".$class.".php")) {
-      include "connection/".$class.".php";
-  } elseif (file_exists($class.".php")){
-      include $class.".php";
-  }
-
+    $class = str_replace('HotelFactory','',$class);
+    $class = str_replace('\\', '/', $class).'.php';
+    if($class[0] == '/')
+        $class = substr($class, 1);
+    if (file_exists($class))
+        include ($class);
 }
 
 spl_autoload_register("myAutoloader");

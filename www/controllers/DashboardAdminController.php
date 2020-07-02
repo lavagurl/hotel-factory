@@ -1,8 +1,9 @@
 <?php
 
-namespace HotelFactory\Controllers;
-use HotelFactory\Models\User;
-use HotelFactory\Core\View;
+namespace HotelFactory\controllers;
+use HotelFactory\models\User;
+use HotelFactory\core\View;
+use HotelFactory\managers\UserManager;
 
 class DashboardAdminController
 {
@@ -49,8 +50,18 @@ class DashboardAdminController
     public function adminPermissionsAction()
     {
       if($_SESSION['role'] == "1"){
-        $user = new User();
         $myView = new View("admin/dashboard/permissions", "back");
+          $query = new UserManager();
+          $query->findAll();
+          print_r($query);
+          $datas = array();
+          foreach($query as $data){
+            $user = new User();
+            $user = $user->hydrate($data);
+            $datas=array_push($user);
+          }
+          print_r($datas);
+          $myView->assign("datas", $datas);
       }else{
         header('Location : /vous-etes-perdu');
       }
