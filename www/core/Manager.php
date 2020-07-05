@@ -57,11 +57,10 @@ class Manager
 
             $sql = "UPDATE ".$this->table." SET ".implode(",", $sqlUpdate)." WHERE id=:id;";
         }
-        //echo($sql);
-        //echo("<br/>");
-        //print_r($params);
+//        echo($sql);
+//        echo("<br/>");
+//        print_r($params);
         $this->connection->query($sql, $params);
-
     }
 
     public function find(int $id): ?Model

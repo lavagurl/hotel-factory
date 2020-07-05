@@ -18,9 +18,9 @@
   controller: User
   action: register
 
-/se-connecter/verifications:
+/confirmation:
   controller: User
-  action: logCheck
+  action: registerConfirm
 
 /vous-etes-perdu:
   controller: Errors

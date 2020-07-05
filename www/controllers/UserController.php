@@ -1,15 +1,19 @@
 <?php
 
 namespace HotelFactory\controllers;
+use HotelFactory\Core\Controller;
+use HotelFactory\core\tools;
 use HotelFactory\forms\LoginForm;
 use HotelFactory\forms\RegisterForm;
+use HotelFactory\mails\ConfirmAccountMail;
+use HotelFactory\mails\mail;
 use HotelFactory\managers\UserManager;
 use HotelFactory\core\Validator;
 use HotelFactory\models\User;
 use HotelFactory\core\Helper;
 use HotelFactory\core\View;
 
-class UserController
+class UserController extends Controller
 {
 
     public function indexAction()
@@ -34,11 +38,15 @@ class UserController
             $errors = $validator->checkForm($configFormUser ,$_POST);
             if(empty($errors))
             {
+                $userArray = array_merge($_POST,array("token"=>tools::generateToken()));
                 $user = new User();
-                $user = $user->hydrate($_POST);
+                $user = $user->hydrate($userArray);
                 $userManager = new UserManager();
                 $userManager->save($user);
-                Helper::redirectTo("User","login");
+                $url = "http://localhost/confirmation?key='".urlencode($user->getId())."'&token='".urlencode(sha1($user->getToken()))."'";
+                $configMail = ConfirmAccountMail::getMail($user->getEmail(), $user->getFirstname(),$url);
+                new mail($configMail);
+                Helper::redirectTo("User","registerConfirm");
             }
             else
             {
@@ -46,7 +54,10 @@ class UserController
             }
         }
     }
-
+    public function registerConfirmAction()
+    {
+        $myView = new View("registerConfirm", "front");
+    }
     public function loginAction()
     {
         $configFormUser = LoginForm::getForm();
@@ -56,7 +67,7 @@ class UserController
             $validator = new Validator();
             $errors = $validator->checkForm($configFormUser, $_POST);
             if (empty($errors)) {
-                $_POST['password'] = md5($_POST['password']);
+                $_POST['password'] = sha1($_POST['password']);
                 $userManager = new UserManager();
                 $user = $userManager->findBy($_POST);
                 if (count($user) == 1) {

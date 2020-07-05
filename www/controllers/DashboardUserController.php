@@ -1,10 +1,11 @@
 <?php
 
 namespace HotelFactory\controllers;
+use HotelFactory\Core\Controller;
 use HotelFactory\core\Helper;
 use HotelFactory\core\View;
 
-class DashboardUserController
+class DashboardUserController extends Controller
 {
 
   public function defaultAction()

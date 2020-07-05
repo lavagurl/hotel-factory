@@ -1,9 +1,10 @@
 <?php
 
 namespace HotelFactory\controllers;
+use HotelFactory\Core\Controller;
 use HotelFactory\core\View;
 
-class ErrorsController
+class ErrorsController extends Controller
 {
   public function quatreCentQuatreAction(){
     $myView = new View('404', 'front');
