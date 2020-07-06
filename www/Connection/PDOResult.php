@@ -28,4 +28,21 @@ class PDOResult implements ResultInterface
     {
         return $this->statement->fetchColumn();
     }
+
+    public function getResult()
+    {
+        $result = $this->statement->fetch();
+        return $result;
+    }
+//    public function getOneOrNullResult(string $class = null): ?Model
+//    {
+//        $result = $this->statement->fetch();
+//
+//        if($class)
+//            return (new $class())->hydrate($result);
+//
+//        return $result;
+//
+//
+//    }
 }

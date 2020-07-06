@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 session_start();
 
 use HotelFactory\core\ConstantLoader;
-use HotelFactory\Core\MiddleWareManager;
+use HotelFactory\core\MiddleWareManager;
 use HotelFactory\core\Router;
 
 //include_once 'autoloader.php';

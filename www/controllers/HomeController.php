@@ -2,6 +2,7 @@
 
 namespace HotelFactory\controllers;
 use HotelFactory\Core\Controller;
+use HotelFactory\core\Helper;
 use HotelFactory\core\View;
 use HotelFactory\mails\ConfirmAccountMail;
 use HotelFactory\mails\mail;

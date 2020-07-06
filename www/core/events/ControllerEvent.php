@@ -1,6 +1,6 @@
 <?php
 
-namespace HotelFactory\Core\Events;
+namespace HotelFactory\Core\events;
 
 use SplObserver;
 use SplSubject;

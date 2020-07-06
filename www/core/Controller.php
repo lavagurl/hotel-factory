@@ -24,7 +24,7 @@ class Controller implements \SplSubject
     // Permet la redirection
     public function redirectTo(string $controller, $action)
     {
-
+        header('Location: '.Helper::getUrl($controller,$action));
     }
 
     // Récupère l'utilisateur connecté où retourne null

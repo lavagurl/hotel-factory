@@ -82,7 +82,7 @@ class Validator
         $requete->querySelect($table["column"]);
         $requete->queryWhere($table["column"], "=", $data);
         $result = $requete->queryGget();
-        if($result == $data)
+        if($result["email"] == $data)
             return false;
         return true;
     }

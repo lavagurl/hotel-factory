@@ -2,11 +2,12 @@
 
 namespace HotelFactory\controllers;
 use HotelFactory\Core\Controller;
+use HotelFactory\core\QueryBuilder;
 use HotelFactory\core\tools;
 use HotelFactory\forms\LoginForm;
 use HotelFactory\forms\RegisterForm;
 use HotelFactory\mails\ConfirmAccountMail;
-use HotelFactory\mails\mail;
+use HotelFactory\mails\Mail;
 use HotelFactory\managers\UserManager;
 use HotelFactory\core\Validator;
 use HotelFactory\models\User;
@@ -38,15 +39,16 @@ class UserController extends Controller
             $errors = $validator->checkForm($configFormUser ,$_POST);
             if(empty($errors))
             {
-                $userArray = array_merge($_POST,array("token"=>tools::generateToken()));
+                $userArray = array_merge($_POST,array("token"=>Tools::generateToken()));
                 $user = new User();
                 $user = $user->hydrate($userArray);
                 $userManager = new UserManager();
                 $userManager->save($user);
-                $url = "http://localhost/confirmation?key='".urlencode($user->getId())."'&token='".urlencode(sha1($user->getToken()))."'";
+                $url = "http://localhost/confirmation?key=".urlencode($user->getEmail())."&token=".urlencode($user->getToken());
                 $configMail = ConfirmAccountMail::getMail($user->getEmail(), $user->getFirstname(),$url);
-                new mail($configMail);
-                Helper::redirectTo("User","registerConfirm");
+                new Mail($configMail);
+                $_SESSION["newUser"] = 1;
+                $this->redirectTo("User","registerConfirm");
             }
             else
             {
@@ -56,7 +58,43 @@ class UserController extends Controller
     }
     public function registerConfirmAction()
     {
-        $myView = new View("registerConfirm", "front");
+        if(!empty($_GET['key']) && !empty($_GET['token']))
+        {
+            $requete = new QueryBuilder(User::class, 'user');
+            $requete->querySelect(["id","idHfRole"]);
+            $requete->queryWhere("email", "=", htmlspecialchars(urldecode($_GET['key'])));
+            $requete->queryWhere("token", "=", htmlspecialchars(urldecode($_GET['token'])));
+            $result = $requete->queryGget();
+            if (!empty($result))
+            {
+                if ($result["idHfRole"] == 4)
+                {
+                    $user = new User();
+                    $user->setId($result["id"]);
+                    $user->setIdHfRole(2);
+                    $userManager = new UserManager();
+                    $userManager->save($user);
+                    new View("registerConfirmMail", "front");
+                }
+                else
+                    die("votre compte est deja validé");
+            }
+            else
+                die("le lien n'est pas bon");
+        }
+        else
+        {
+            if (!empty($_SESSION["newUser"]) && $_SESSION["newUser"] == 1)
+            {
+                new View("registerConfirm", "front");
+                unset($_SESSION["newUser"]);
+            }
+            else
+            {
+                $this->redirectTo(  "Errors","quatreCentQuatre");
+            }
+        }
+
     }
     public function loginAction()
     {
@@ -75,9 +113,9 @@ class UserController extends Controller
                     $_SESSION['role'] = $user[0]->getIdHfRole();
                     echo ($_SESSION['role']);
                     if ($_SESSION['role'] == 1)
-                        Helper::redirectTo('DashboardAdmin', 'default');
+                        $this->redirectTo('DashboardAdmin', 'default');
                     elseif ($_SESSION['role'] == 2)
-                         Helper::redirectTo('DashboardUser', 'default');
+                        $this->redirectTo('DashboardUser', 'default');
                 } else
                     echo("identifiant ou mot de passe incorrect");
             }

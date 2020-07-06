@@ -1,8 +1,8 @@
 <?php
 
-namespace HotelFactory\Middleware;
+namespace HotelFactory\middleware;
 
-use HotelFactory\Core\Request;
+use HotelFactory\core\Request;
 
 class RoleMiddleWare
 {
