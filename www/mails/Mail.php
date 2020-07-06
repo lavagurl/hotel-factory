@@ -9,7 +9,7 @@ require 'lib/PHPMailer/src/Exception.php';
 require 'lib/PHPMailer/src/PHPMailer.php';
 require 'lib/PHPMailer/src/SMTP.php';
 
-class mail
+class Mail
 {
     private $email;
     public function __construct($settings)

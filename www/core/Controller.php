@@ -1,6 +1,6 @@
 <?php
 
-namespace HotelFactory\Core;
+namespace HotelFactory\core;
 
 use HotelFactory\models\Model;
 use SplObserver;

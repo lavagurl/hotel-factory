@@ -2,7 +2,7 @@
 
 namespace HotelFactory\core;
 
-class tools
+class Tools
 {
     public static function generateToken()
     {
