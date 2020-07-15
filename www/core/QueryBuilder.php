@@ -1,6 +1,6 @@
 <?php
 
-namespace HotelFactory\Core; 
+namespace HotelFactory\core;
 
 class QueryBuilder extends Manager
 {
@@ -10,6 +10,8 @@ class QueryBuilder extends Manager
     private $limit = "";
     private $groupBy = "";
     private $selector = "";
+    private $join = "";
+
     public function __construct($class,$table)
     {
         parent::__construct($class,$table);
@@ -118,6 +120,12 @@ class QueryBuilder extends Manager
         $this->limit .= " ".$limit." ";
         return $this;
     }
+
+    public function queryJoin(string $table1, string $table2, string $table1param, string $table2param )
+    {
+        return $this->join = "SELECT * FROM ".$table1." INNER JOIN table2 ON table1.".$table1param."= table2.".$table2param;
+    }
+
 
     public function queryGget()
     {

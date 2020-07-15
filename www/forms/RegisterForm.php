@@ -1,10 +1,10 @@
 <?php
 
-namespace HotelFactory\Forms;
-use HotelFactory\Core\Helper;
+namespace HotelFactory\forms;
+use HotelFactory\core\Helper;
 
 class RegisterForm {
-    
+
     public static function getForm(){
         return [
             "config"=>[
@@ -42,7 +42,7 @@ class RegisterForm {
                     "class"=>"form-control form-control-user",
                     "id"=>"",
                     "required"=>true,
-                    "uniq"=>["table"=>"users","column"=>"email"],
+                    "uniq"=>["table"=>"user","column"=>"email"],
                     "errorMsg"=>"Adresse mail invalide ou déja utilisée"
                 ],
                 "password"=>[

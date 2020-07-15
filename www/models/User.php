@@ -1,7 +1,7 @@
 <?php
 
-namespace HotelFactory\Models;
-use HotelFactory\Core\Helper;
+namespace HotelFactory\models;
+use HotelFactory\managers\RoleManager;
 
 class User extends Model
 {
@@ -11,12 +11,9 @@ class User extends Model
     protected $name;
     protected $firstname;
     protected $birthdate;
-    protected $creation_date;
+    protected $creationDate;
+    protected $idHfRole;
 
-//    public function __construct()
-//    {
-//        parent::__construct(Model::class, 'Models');
-//    }
 
     /* SETTERS */
 
@@ -50,47 +47,106 @@ class User extends Model
         $this->birthdate=$birthdate;
     }
 
-    public function setCreationDate($creation_date)
+    public function setCreationDate($creationDate)
     {
-        $this->creation_date=$creation_date;
+        $this->creationDate=$creationDate;
+    }
+    public function setIdHfRole($idHfRole)
+    {
+        $this->idHfRole=$idHfRole;
     }
 
-      /* GETTERS */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
+    /* GETTERS */
 
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     public function getEmail()
     {
-      return $this->email;
+        return $this->email;
     }
 
     public function getPassword()
     {
-      return $this->password;
+        return $this->password;
     }
 
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     public function getFirstname()
     {
-      return $this->firstname;
+        return $this->firstname;
     }
 
     public function getBirthdate()
     {
-      return $this->birthdate;
+        return $this->birthdate;
     }
 
     public function getCreationDate()
     {
-      return $this->creation_date;
+        return $this->creationDate;
     }
+    public function getIdHfRole()
+    {
+        return $this->idHfRole;
+    }
+
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    public static function showUserTable($users){
+        $roleManager = new RoleManager();
+
+        $tabUsers = [];
+        foreach($users as $user){
+            $role = $roleManager->find($user->getIdHfRole());
+
+            $tabUsers[] = [
+                "id" => $user->getId(),
+                "name" => $user->getName(),
+                "firstname" => $user->getFirstname(),
+                "email" => $user->getEmail(),
+                "birthdate" => $user->getBirthdate(),
+                "creationDate" => $user->getCreationDate(),
+                "idHfRole" => $role->getId()
+            ];
+        }
+
+        $tab = [
+            "colonnes"=>[
+                "Id",
+                "Nom",
+                "Prénom",
+                "Email",
+                "Date de naissance",
+                "Date de création",
+                "Role"
+            ],
+
+            "fields"=>[
+                "User"=>[]
+            ]
+        ];
+
+        $tab["fields"]["User"] = $tabUsers;
+
+
+        return $tab;
+    }
+
 }
 
- ?>
+?>

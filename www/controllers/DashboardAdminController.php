@@ -1,69 +1,72 @@
 <?php
 
-namespace HotelFactory\Controllers;
-use HotelFactory\Models\User;
-use HotelFactory\Core\View;
+namespace HotelFactory\controllers;
 
-class DashboardAdminController
+use HotelFactory\core\Controller;
+use HotelFactory\core\Helper;
+use HotelFactory\core\View;
+use HotelFactory\managers\CommentManager;
+use HotelFactory\managers\QuestionManager;
+use HotelFactory\models\Comment;
+use HotelFactory\models\Question;
+
+
+class DashboardAdminController extends Controller
 {
     public function defaultAction()
     {
-      if($_SESSION['role'] == "1"){
+        Helper::checkRole(1);
         $myView = new View("admin/dashboard/home", "back");
-      }else{
-        header('Location : /vous-etes-perdu');
-      }
 
     }
 
     public function adminPagesAction()
     {
-      if($_SESSION['role'] == "1"){
+        Helper::checkRole(1);
         $myView = new View("admin/dashboard/pages", "back");
-      }else{
-        header('Location : /vous-etes-perdu');
-      }
 
     }
 
     public function adminDesignAction()
     {
-      if($_SESSION['role'] == "1"){
+        Helper::checkRole(1);
         $myView = new View("admin/dashboard/design", "back");
-      }else{
-        header('Location : /vous-etes-perdu');
-      }
 
     }
 
     public function adminCommentsAction()
     {
-      if($_SESSION['role'] == "1"){
+        Helper::checkRole(1);
+        $commentManager = new CommentManager();
+        $comments = $commentManager->findAll();
+        $configTableComments = Comment::showCommentTable($comments);
         $myView = new View("admin/dashboard/comments", "back");
-      }else{
-        header('Location : /vous-etes-perdu');
-      }
+        $myView->assign("configTableComments", $configTableComments);
 
     }
 
     public function adminPermissionsAction()
     {
-      if($_SESSION['role'] == "1"){
-        $user = new User();
-        $myView = new View("admin/dashboard/permissions", "back");
-      }else{
-        header('Location : /vous-etes-perdu');
-      }
+        Helper::checkRole(1);
 
     }
 
     public function adminSettingsAction()
     {
-      if($_SESSION['role'] == "1"){
+        Helper::checkRole(1);
         $myView = new View("admin/dashboard/settings", "back");
-      }else{
-        header('Location : /vous-etes-perdu');
-      }
+    }
+
+    public function adminFaqAction()
+    {
+        Helper::checkRole(1);
+        //$configFromAnswers = AnswersForm::getForm();
+
+        $questionManager = new QuestionManager();
+        $questions = $questionManager->findAll();
+        $configTableQuestions = Question::showQuestionTable($questions);
+        $myView = new View("admin/dashboard/faq", "back");
+        $myView->assign("configTableQuestions", $configTableQuestions);
     }
 
 }

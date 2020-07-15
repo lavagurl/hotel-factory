@@ -4,4 +4,8 @@
 </br>
   <a href="/s-inscrire">S'inscrire</a>
 
+    <div>
+        <?php $this->addModal("show_comments", $configTableComments); ?>
+    </div>
+
 </div>

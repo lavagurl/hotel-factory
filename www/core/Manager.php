@@ -1,10 +1,10 @@
 <?php
 
-namespace HotelFactory\Core; 
+namespace HotelFactory\core;
 
-use HotelFactory\Core\Connection\BDDInterface;
-use HotelFactory\Core\Connection\PDOConnection;
-use HotelFactory\Models\Model;
+use HotelFactory\connection\BDDInterface;
+use HotelFactory\connection\PDOConnection;
+use HotelFactory\models\Model;
 
 class Manager
 {
@@ -27,7 +27,7 @@ class Manager
     {
         $objectArray =  $objectToSave->__toArray();
 
-    //print_r($objectArray);
+        //print_r($objectArray);
         //$columnsData = array_values($objectArray);
         $objectArray = array_filter($objectArray, function($objectToSave)
         {
@@ -57,11 +57,10 @@ class Manager
 
             $sql = "UPDATE ".$this->table." SET ".implode(",", $sqlUpdate)." WHERE id=:id;";
         }
-        //echo($sql);
-        echo("<br/>");
-        //print_r($params);
+//        echo($sql);
+//        echo("<br/>");
+//        print_r($params);
         $this->connection->query($sql, $params);
-
     }
 
     public function find(int $id): ?Model
@@ -132,15 +131,13 @@ class Manager
             $sql .= "ORDER BY ". key($order). " ". $order[key($order)];
         }
         // Select * FROM users WHERE firstname LIKE :firstname ORDER BY id desc
-
+        //echo($sql);
         $result = $this->connection->query($sql, $params);
         $rows = $result->getArrayResult();
-
         foreach($rows as $row) {
             $object = new $this->class();
             array_push($results, $object->hydrate($row));
         }
-
         return $results;
 
     }
@@ -211,4 +208,3 @@ class Manager
 
 
 }
-

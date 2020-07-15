@@ -1,6 +1,6 @@
 <?php
 
-namespace HotelFactory\Core; 
+namespace HotelFactory\core;
 
 class Helper
 {
@@ -14,6 +14,17 @@ class Helper
             }
         }
 
+
         header('Location: /vous-etes-perdu');
+    }
+    public static function redirectTo($controller, $action)
+    {
+        header('Location: '.Helper::getUrl($controller,$action));
+    }
+
+    public static function checkRole($role)
+    {
+        if($_SESSION['role'] != $role)
+            header('Location: /vous-etes-perdu');
     }
 }

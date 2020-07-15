@@ -1,7 +1,7 @@
 <?php
 
-namespace HotelFactory\Forms;
-use HotelFactory\Core\Helper;
+namespace HotelFactory\forms;
+use HotelFactory\core\Helper;
 
 class LoginForm {
 
@@ -9,7 +9,7 @@ class LoginForm {
         return [
             "config"=>[
                 "method"=>"POST",
-                "action"=>Helper::getUrl("User", "logCheck"),
+                "action"=>Helper::getUrl("User", "login"),
                 "class"=>"User",
                 "id"=>"formLoginUser",
                 "submit"=>"Se connecter"
@@ -22,7 +22,6 @@ class LoginForm {
                     "class"=>"form-control form-control-user",
                     "id"=>"",
                     "required"=>true,
-                    "uniq"=>["table"=>"users","column"=>"email"],
                     "errorMsg"=>"identifiant ou mot de passe incorrect"
                 ],
                 "password"=>[

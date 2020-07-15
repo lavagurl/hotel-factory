@@ -1,3 +1,4 @@
+#-----------Général-----------#
 /:
   controller: Home
   action: default
@@ -18,6 +19,10 @@
   controller: User
   action: register
 
+/confirmation:
+  controller: User
+  action: registerConfirm
+
 /se-connecter/verifications:
   controller: User
   action: logCheck
@@ -26,7 +31,17 @@
   controller: Errors
   action: quatreCentQuatre
 
-#Connexion client HF / Dashboard Client
+/profile:
+    controller: User
+    action: index
+
+/profile/modify: #Modifier son profil
+  controller: User
+  action: update
+
+#-----------Connexion client HF / Dashboard Client-----------#
+
+#Affichage de la vue
 /settings:
   controller: DashboardUser
   action: default
@@ -35,7 +50,7 @@
   controller: DashboardUser
   action: userPages
 
-/settings/apprences:
+/settings/apparences:
   controller: DashboardUser
   action: userDesign
 
@@ -43,9 +58,23 @@
   controller: DashboardUser
   action: userSettings
 
+/settings/faq:
+  controller: DashboardUser
+  action: userFaq
 
-#Connexion admin HF / Dashboard Admin
 
+#Actions
+/settings/parametres/add_comment: #Créer un commentaire
+  controller: Comment
+  action: comment
+
+/settings/faq/add_question: #Ajouter une question
+  controller: Question
+  action: create
+
+#-----------Connexion admin HF / Dashboard Admin-----------#
+
+#Affichage de la vue
 /dashboard:
   controller: DashboardAdmin
   action: default
@@ -58,15 +87,43 @@
   controller: DashboardAdmin
   action: adminDesign
 
-/dashboard/commentaires:
-  controller: DashboardAdmin
-  action: adminComments
-
-
-/dashboard/permissions:
-  controller: DashboardAdmin
-  action: adminPermissions
-
 /dashboard/parametres:
   controller: DashboardAdmin
   action: adminSettings
+
+/dashboard/faq:
+  controller: DashboardAdmin
+  action: adminFaq
+
+/dashboard/faq/anwser:
+  controller: Answer
+  action: default
+
+/dashboard/faq/answer/create:
+  controller: Answer
+  action: create
+
+#Actions
+/dashboard/comments: #Lister les commentaires des utilisateurs
+  controller: Comment
+  action: list
+
+/dashboard/comment_active: #Afficher les commentaires sur l'accueil
+  controller: Comment
+  action: update
+
+/dashboard/permissions: #Lister les utilisateurs et leurs roles
+  controller: User
+  action: list
+
+/dashboard/perm_modify: #Changer le role d'un user
+  controller: User
+  action: update
+
+/dashboard/faq/reply: #Répondre à un commentaire
+  controller: Answer
+  action: create
+
+/dashboard/createpage: #Créer un commentaire
+  controller: PageBuilder
+  action: default
