@@ -43,10 +43,10 @@ class View
 
     // $this->addModal("carousel", $data);
     public function addModal($modal, $data)
-    {        if (!file_exists("views/modals/".$modal.".mod.php")) {
-
-        die("Le modal n'existe pas!");
-            }
+    {
+        if (!file_exists("views/modals/".$modal.".mod.php")) {
+            die("Le modal n'existe pas!");
+        }
 
         include "views/modals/".$modal.".mod.php";
     }

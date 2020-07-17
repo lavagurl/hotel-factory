@@ -1,7 +1,7 @@
 <div>
     <h1>Inscription</h1>
-    <p>Votre compte à bien été enregistrer.<br/>
-        Merci de vérifier vos emails afin de valider votre compte.
+    <p>Votre email à été validé avec succes<br/>
+        Vous pouvez maintenant vous connecter à votre espace.
     </p>
 
     </br>

@@ -1,6 +1,8 @@
 <?php
 
-namespace HotelFactory\core;
+namespace HotelFactory\core\builders;
+
+use HotelFactory\core\Manager;
 
 class QueryBuilder extends Manager
 {
@@ -10,8 +12,6 @@ class QueryBuilder extends Manager
     private $limit = "";
     private $groupBy = "";
     private $selector = "";
-    private $join = "";
-
     public function __construct($class,$table)
     {
         parent::__construct($class,$table);
@@ -91,6 +91,10 @@ class QueryBuilder extends Manager
             $value = $operator;
             $operator = "=";
         }
+        if(!empty($this->where))
+        {
+            $this->where.= " AND ";
+        }
         $this->where .= " " . $column . " " . $operator;
         $this->where .= (is_int($value)) ? " " . $value : " '".$value."'";
         return $this;
@@ -121,12 +125,6 @@ class QueryBuilder extends Manager
         return $this;
     }
 
-    public function queryJoin(string $table1, string $table2, string $table1param, string $table2param )
-    {
-        return $this->join = "SELECT * FROM ".$table1." INNER JOIN table2 ON table1.".$table1param."= table2.".$table2param;
-    }
-
-
     public function queryGget()
     {
         if (!isset($this->selector) || !isset($this->table)) {
@@ -139,9 +137,10 @@ class QueryBuilder extends Manager
                 . (!empty($this->groupBy) ? "GROUP BY" . $this->groupBy : "")
                 . (!empty($this->order) ? "ORDER BY" . $this->order : "")
                 . (!empty($this->limit) ? "LIMIT" . $this->limit : "");
-
             $result = $this->connection->query($this->query);
-            return $result->getValueResult();
+            //echo $this->query;
+            //print_r($result);
+            return $result->getResult();
         }
     }
 

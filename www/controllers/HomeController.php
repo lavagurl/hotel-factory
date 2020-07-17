@@ -1,20 +1,19 @@
 <?php
 
 namespace HotelFactory\controllers;
-
-use HotelFactory\core\Controller;
+use HotelFactory\Core\Controller;
+use HotelFactory\core\Helper;
 use HotelFactory\core\View;
-use HotelFactory\managers\CommentManager;
-use HotelFactory\models\Comment;
+use HotelFactory\mails\ConfirmAccountMail;
+use HotelFactory\mails\mail;
 
 class HomeController extends Controller
 {
     public function defaultAction()
     {
-        $commentManager = new CommentManager();
-        $comments = $commentManager->findAll();
-        $configTableComments = Comment::showCommentTable($comments);
         $myView = new View("home", "front");
-        $myView->assign("configTableComments", $configTableComments);
+//        $url = "token";
+//        $configMail = ConfirmAccountMail::getMail("hotelfactorytest@gmail.com", "toto",$url);
+//        new mail($configMail);
     }
 }

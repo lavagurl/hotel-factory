@@ -14,13 +14,12 @@ class Helper
             }
         }
 
-
         header('Location: /vous-etes-perdu');
     }
-    public static function redirectTo($controller, $action)
-    {
-        header('Location: '.Helper::getUrl($controller,$action));
-    }
+//    public static function redirectTo($controller, $action)
+//    {
+//        header('Location: '.Helper::getUrl($controller,$action));
+//    }
 
     public static function checkRole($role)
     {

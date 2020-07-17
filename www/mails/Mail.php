@@ -12,7 +12,7 @@ require 'lib/PHPMailer/src/SMTP.php';
 class Mail
 {
     private $email;
-    public function __construct($settings)
+    public function sendMail($settings)
     {
         $this->email = new PHPMailer(true);
         try {
@@ -56,36 +56,5 @@ class Mail
         $this->email->Subject = $body["subject"];
         $this->email->Body = $body["body"];
         $this->email->AltBody = $body["altBody"];
-    }
-
-    public function testMail()
-    {
-
-        try {
-
-//Recipients
-            $this->email->setFrom('ne-pas-repondre@hotelfactory.com', 'Administrateur HotelFactory');
-            $this->email->addAddress('hotelfactorytest@gmail.com', 'Joe User');     // Add a recipient
-//             // Name is optional
-            // $mail->addReplyTo('info@example.com', 'Information');
-            // $mail->addCC('cc@example.com');
-            //    $mail->addBCC('bcc@example.com');
-
-// Attachments
-//        $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-
-// Content
-            $this->email->isHTML(true);                                  // Set email format to HTML
-            $this->email->Subject = 'Here is the subject';
-            $this->email->Body = 'This is the HTML message body <b>in bold!</b>';
-            $this->email->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-            $this->email->send();
-            echo 'Message has been sent';
-        } catch
-        (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$this->email->ErrorInfo}";
-        }
     }
 }

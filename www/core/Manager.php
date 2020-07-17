@@ -27,7 +27,7 @@ class Manager
     {
         $objectArray =  $objectToSave->__toArray();
 
-        //print_r($objectArray);
+    //print_r($objectArray);
         //$columnsData = array_values($objectArray);
         $objectArray = array_filter($objectArray, function($objectToSave)
         {
@@ -57,9 +57,9 @@ class Manager
 
             $sql = "UPDATE ".$this->table." SET ".implode(",", $sqlUpdate)." WHERE id=:id;";
         }
-//        echo($sql);
-//        echo("<br/>");
-//        print_r($params);
+        //echo($sql);
+        //echo("<br/>");
+        //print_r($params);
         $this->connection->query($sql, $params);
     }
 
@@ -208,3 +208,4 @@ class Manager
 
 
 }
+

@@ -33,7 +33,6 @@ class PDOConnection implements BDDInterface
         } else {
             $queryPrepared = $this->pdo->prepare($query);
             $queryPrepared->execute();
-
             return new PDOResult($queryPrepared);
         }
     }

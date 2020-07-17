@@ -2,10 +2,11 @@
 
 namespace HotelFactory\core;
 
+use HotelFactory\core\builder\FormBuilder;
 use HotelFactory\models\Model;
 use SplObserver;
 use SplObjectStorage;
-use HotelFactory\core\events\ControllerEvent;
+use HotelFactory\core\Events\ControllerEvent;
 
 class Controller implements \SplSubject
 {
@@ -21,12 +22,26 @@ class Controller implements \SplSubject
     }
 
 
-    // Permet la redirection
-    public function redirectTo(string $controller, $action)
+    public function createForm(string $class, Model &$model = null): Form
     {
+        $form = new $class;
+        $form->configureOptions();
+        $form->buildForm(new FormBuilder());
 
+        if ($model) {
+            $form->setModel($model);
+            $form->associateValue();
+        }
+
+
+        return $form;
     }
 
+    // Permet la redirection
+    public function redirectTo(string $controller, string $action)
+    {
+        header('Location: ' . Helper::getUrl($controller, $action));
+    }
     // Récupère l'utilisateur connecté où retourne null
     public function getUser()
     {
@@ -39,9 +54,8 @@ class Controller implements \SplSubject
         $this->detach($this->event);
 
 
-
         $myView = new View($controller, $template);
-        foreach($params as $key => $param) {
+        foreach ($params as $key => $param) {
             $myView->assign($key, $param);
         }
     }
@@ -66,6 +80,4 @@ class Controller implements \SplSubject
             // $observer->logged($_SERVER['REQUEST_URI']);
         }
     }
-
-
 }

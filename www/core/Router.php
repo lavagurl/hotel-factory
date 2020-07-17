@@ -2,6 +2,9 @@
 namespace HotelFactory\core;
 
 
+
+use HotelFactory\core\exceptions\NotFoundException;
+
 class Router {
 
     private $params = [];
@@ -40,7 +43,8 @@ class Router {
                 return;
             }
         }
-        die("L'url n'existe pas : Erreur 404");
+        throw new NotFoundException("L'url n'existe pas : Erreur 404");
+        //die("L'url n'existe pas : Erreur 404");
 
     }
 
@@ -72,7 +76,6 @@ class Router {
         }
     }
 
-
     private function getParams($params) {
         $explodedParams = explode('&', $params, 2);
         $result = [];
@@ -81,7 +84,7 @@ class Router {
             if(isset($data[1]))
                 $result[$data[0]] =  $data[1];
         }
-        print_r($result);
+        //print_r($result);
         return $result;
     }
 
