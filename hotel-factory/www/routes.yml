@@ -29,6 +29,18 @@
   controller: User
   action: registerConfirm
 
+/mot-de-passe-oublie:
+  controller: User
+  action: forgotPassword
+
+/nouveau-mot-de-passe:
+  controller: User
+  action: newPassword
+
+/suppression-de-compte:
+  controller: User
+  action: delete
+
 /se-connecter/verifications:
   controller: User
   action: logCheck

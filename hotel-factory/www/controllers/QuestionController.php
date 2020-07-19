@@ -66,7 +66,7 @@ class QuestionController extends Controller
             $questionManager = new QuestionManager();
             $questionManager->save($question);
         }
-        Helper::redirectTo("Question", "list");
+        $this->redirectTo("Question", "list");
     }
 
 

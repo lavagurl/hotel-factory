@@ -27,4 +27,9 @@ class Helper
         if($_SESSION['role'] != $role)
             header('Location: /vous-etes-perdu');
     }
+    public static function checkDisconnected()
+    {
+        if(!empty($_SESSION['role']))
+            Helper::redirectTo("User","default");
+    }
 }

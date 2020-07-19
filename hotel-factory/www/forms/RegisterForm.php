@@ -4,7 +4,7 @@ namespace HotelFactory\forms;
 use HotelFactory\core\Helper;
 
 class RegisterForm {
-
+    
     public static function getForm(){
         return [
             "config"=>[

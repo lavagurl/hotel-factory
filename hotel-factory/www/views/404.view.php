@@ -1,12 +1,12 @@
 <?php
 
+use HotelFactory\core\Helper;
+
 if(empty($_SESSION['role'])) {
-  $chemin = "/home";
-}elseif($_SESSION['role'] == "1"){
-  $chemin = "/dashboard";
-}elseif($_SESSION['role']=="2"){
-  $chemin = "/settings";
-}
+  $chemin = Helper::getUrl("Home","default");
+}else
+  $chemin = Helper::getUrl("User","default");
+
 
 ?>
 <div>
