@@ -144,7 +144,7 @@ class QueryBuilder extends Manager
                 . (!empty($this->groupBy) ? "GROUP BY" . $this->groupBy : "")
                 . (!empty($this->order) ? "ORDER BY" . $this->order : "")
                 . (!empty($this->limit) ? "LIMIT" . $this->limit : "");
-            echo $this->query;
+            //echo $this->query;
             $result = $this->connection->query($this->query);
             return $result->getValueResult();
         }

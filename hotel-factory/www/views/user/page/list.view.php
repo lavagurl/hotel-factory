@@ -1,4 +1,2 @@
-<div>
-    <h1>Nos chambres</h1>
-    <?php $this->addModal("show", $config); ?>
-</div>
+<h1> Liste des pages </h1>
+<?php $this->addModal("show_pages_infos", $pageResult);   ?>

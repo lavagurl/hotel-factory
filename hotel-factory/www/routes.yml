@@ -69,7 +69,17 @@
 #Affichage de la gestion des pages clientes
 /settings/mes-pages:
   controller: Page
-  action: list
+  action: default
+
+#Affichage de la modification du contenu des pages clientes
+/settings/page/formpage:
+  controller: Page
+  action: formpage
+
+#Validation des changements de la page
+/settings/page/update:
+  controller: Page
+  action: update
 
 #Affichage de la page pour gérer l'apparence des pages clientes
 /settings/apparences:
@@ -119,7 +129,17 @@
 #Backoffice gestion des pages HF
 /dashboard/mes-pages:
   controller: Page
-  action: list
+  action: default
+
+#Affichage de la modification du contenu des pages clientes
+/dashboard/page/formpage:
+  controller: Page
+  action: formpage
+
+#Validation des changements de la page
+/dashboard/page/update:
+  controller: Page
+  action: update
 
 #Backoffice gestion de l'apprence du site HF
 /dashboard/apparences:
