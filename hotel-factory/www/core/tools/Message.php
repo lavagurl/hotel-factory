@@ -2,46 +2,64 @@
 
 namespace HotelFactory\core\tools;
 
-class Message {
+class Message
+{
 
-    public static function InscriptionSucess(){
+    public static function InscriptionSucess()
+    {
         return [
-            "title"=>"Inscription",
+            "title" => "Inscription",
 
-            "body"=>[
+            "body" => [
                 "Votre compte à bien été enregistrer.",
-                    "Merci de vérifier vos emails afin de valider votre compte."
+                "Merci de vérifier vos emails afin de valider votre compte."
             ]
         ];
     }
-    public static function mailInscriptionSucess(){
-        return [
-            "title"=>"Inscription",
 
-            "body"=>[
+    public static function mailInscriptionSucess()
+    {
+        return [
+            "title" => "Inscription",
+
+            "body" => [
                 "Votre email à été validé avec succes.",
                 "Vous pouvez maintenant vous connecter à votre espace."
             ]
         ];
     }
 
-    public static function sendMailForgotPasswordSucess(){
+    public static function sendMailForgotPasswordSucess()
+    {
         return [
-            "title"=>"Mot de passe oublié",
+            "title" => "Mot de passe oublié",
 
-            "body"=>[
+            "body" => [
                 "Votre compte à bien été enregistrer.",
                 "Merci de vérifier vos emails afin de valider votre compte."
             ]
         ];
     }
-    public static function newPasswordSucess(){
-        return [
-            "title"=>"Changement de mot de passe",
 
-            "body"=>[
+    public static function newPasswordSucess()
+    {
+        return [
+            "title" => "Changement de mot de passe",
+
+            "body" => [
                 "Votre mot de passe à été changé avec succes",
                 "Vous pouvez maintenant vous connecter à votre espace avec votre nouveau mot de passe."
+            ]
+        ];
+    }
+
+    public static function linkNoValid()
+    {
+        return [
+            "title" => "Validation",
+
+            "body" => [
+                "Le lien n'est pas valide"
             ]
         ];
     }

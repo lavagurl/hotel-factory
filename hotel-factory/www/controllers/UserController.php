@@ -262,7 +262,11 @@ class UserController extends Controller
                 $_SESSION["idPassword"] = $result["id"];
             }
             else
-                die("le lien n'est pas valide");
+            {
+                $message = Message::linkNoValid();
+                $view = new View("message", "front");
+                $view->assign("message",$message);
+            }
         }
         else
         {
