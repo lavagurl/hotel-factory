@@ -17,4 +17,9 @@ class HomeController extends Controller
         $myView = new View("home", "front");
         $myView->assign("configTableComments", $configTableComments);
     }
+
+    public function conditionsAction()
+    {
+        new View("conditions","front");
+    }
 }

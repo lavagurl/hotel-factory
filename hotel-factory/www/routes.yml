@@ -49,6 +49,11 @@
   controller: User
   action: update
 
+#Affichage des conditions d'utilisations
+/conditions:
+  controller: Home
+  action: conditions
+
 
 /create_hotel:
   controller: DashboardUser

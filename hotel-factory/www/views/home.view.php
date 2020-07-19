@@ -8,4 +8,8 @@
         <?php $this->addModal("show_comments", $configTableComments); ?>
     </div>
 
+    <div>
+      <a href="/conditions">Conditions d'utilisation</a>
+    </div>
+
 </div>
