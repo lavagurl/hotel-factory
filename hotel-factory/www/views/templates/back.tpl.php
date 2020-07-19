@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 
     <meta charset="UTF-8">
-
-	<title>Template de back</title>
+    <link rel="stylesheet" type="text/css" href="/script/css/back/style.css">
+	<title>HotelFactory backoffice</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 
@@ -18,7 +18,8 @@
       <li> <a href="/se-deconnecter">Se déconnecter</a> </li>
     </ul>
   </div>
-  <ul>
+  <nav>
+    <ul id="mainMenu">
       <?php if($_SESSION['role'] == 1): ?>
           <li> <a href="/dashboard">Accueil</a> </li>
           <li> <a href="/dashboard/mes-pages">Mes pages</a> </li>
@@ -30,14 +31,15 @@
           <li> <a href="/dashboard/hotels">Hotels</a> </li>
       <?php else: ?>
 
-    <li> <a href="/settings">Accueil</a> </li>
-    <li> <a href="/settings/mes-pages">Mes pages</a> </li>
-    <li> <a href="/settings/apparences">Apparences</a> </li>
-    <li> <a href="/settings/parametres">Paramètres</a> </li>
-    <li> <a href="/settings/faq">FAQ</a> </li>
+      <li> <a href="/settings">Accueil</a> </li>
+      <li> <a href="/settings/mes-pages">Mes pages</a> </li>
+      <li> <a href="/settings/apparences">Apparences</a> </li>
+      <li> <a href="/settings/parametres">Paramètres</a> </li>
+      <li> <a href="/settings/faq">FAQ</a> </li>
 
       <?php endif; ?>
-  </ul>
+    </ul>
+  </nav>
 
   <div>
           <?php include "views/".$this->view.".view.php";?>
