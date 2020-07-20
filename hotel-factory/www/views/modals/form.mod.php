@@ -15,7 +15,7 @@ class="<?= $data["config"]["class"]?>">
 
               <?php if($configField["type"] == "captcha"): ?>
                   <img src="script/captcha.php" width="300px">
-              <?php endif; ?>
+              <?php endif;?>
 
             <input
                 value="<?= (isset($inputData[$name]) && $configField["type"]!="password")?$inputData[$name]:'' ?>"

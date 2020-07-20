@@ -41,13 +41,15 @@
                     <?php if($fields['active'] == 0): ?>
                     <td><input type="radio" value="1" name="active"/>Actif</td>
                     <td><input type="radio" value="0" name="active" checked/>Inactif</td>
-                        <td><input type="submit" value="Enregistrer"/></td>
                     <?php else: ?>
                     <td><input type="radio" value="1" name="active" checked/>Actif</td>
                     <td><input type="radio" value="0" name="active" />Inactif</td>
-                        <td><input type="submit" value="Enregistrer"/></td>
 
                     <?php endif; ?>
+                    <td><input type="submit" value="Enregistrer"/></td>
+                    <td><a href="/dashboard/comment/delete?id=<?= $fields['id'] ?>">Supprimer</a></td>
+
+
                 </tr>
             </form>
         <?php endforeach; ?>

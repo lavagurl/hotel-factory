@@ -12,7 +12,7 @@ require 'lib/PHPMailer/src/SMTP.php';
 class Mail
 {
     private $email;
-    public function __construct($settings)
+    public function sendMail($settings)
     {
         $this->email = new PHPMailer(true);
         try {

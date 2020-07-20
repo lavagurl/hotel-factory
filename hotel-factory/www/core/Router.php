@@ -40,6 +40,7 @@ class Router {
                 return;
             }
         }
+        header('Location: '.Helper::getUrl("Errors","quatreCentQuatre"));
         die("L'url n'existe pas : Erreur 404");
 
     }

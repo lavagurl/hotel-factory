@@ -38,7 +38,7 @@ class CommentController extends Controller
             $comment = $comment->hydrate($_POST);
             $commentManager->save($comment);
         }
-        Helper::redirectTo('Comment','list');
+        $this->redirectTo('Comment','list');
     }
 
 
@@ -52,7 +52,17 @@ class CommentController extends Controller
                 $commentManager->save($comment);
 
         }
-        Helper::redirectTo('Comment','formCommentAction');
+        $this->redirectTo('Comment','formComment');
+    }
+
+    public function destroyAction(){
+        if(isset($_GET) && !(empty($_GET)))
+        {
+            $commentManager = new CommentManager();
+            $commentManager->delete($_GET['id']);
+
+        }
+        $this->redirectTo('Comment','list');
     }
 
 

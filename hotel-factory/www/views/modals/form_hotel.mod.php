@@ -20,6 +20,7 @@ $inputData = $GLOBALS["_".strtoupper($data["config"]["method"])];
                     class="<?= $configField["class"]??'' ?>"
                     id="<?= $configField["id"]??'' ?>"
                     <?=(!empty($configField["required"]))?"required='required'":""?> >
+                <input hidden="hidden" name="idUser" value="<?= $_SESSION['id'] ?>" />
             </div>
         </div>
     <?php endforeach;?>

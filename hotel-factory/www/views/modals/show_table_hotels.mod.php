@@ -35,7 +35,7 @@
                             <td><a href="/dashboard/details_hotel?id=<?= $fields['id']?>">Oui</a></td>
                         <?php endif;
                     elseif ($key == "route"): ?>
-                        <td><a href="<?= $fields["route"] ?>">Par ici !</a></td>
+                        <td><a href="https://<?= $fields["route"] ?>.hotel-factory.com" target="_blank">Par ici !</a></td>
                     <?php
                     endif;
 

@@ -40,8 +40,8 @@
 
 #Affichage de la page de profil
 /profile:
-    controller: User
-    action: index
+  controller: User
+  action: index
 
 
 #Modifier son profil
@@ -49,14 +49,22 @@
   controller: User
   action: update
 
+/mot-de-passe-oublie:
+  controller: User
+  action: forgotPassword
 
-/create_hotel:
-  controller: DashboardUser
-  action: createHotel
+/nouveau-mot-de-passe:
+  controller: User
+  action: newPassword
 
-/add_hotel:
-  controller: Hotel
-  action: create
+/suppression-de-compte:
+  controller: User
+  action: delete
+
+#Affichage des conditions d'utilisations
+/conditions:
+  controller: Home
+  action: conditions
 
 
 #-----------Connexion client HF / Dashboard Client-----------#
@@ -66,12 +74,22 @@
   controller: User
   action: default
 
-#Affichage de la gestion des pages clientes
+#Affichage de la gestion des page clientes
 /settings/mes-pages:
   controller: Page
-  action: list
+  action: default
 
-#Affichage de la page pour gérer l'apparence des pages clientes
+#Affichage de la modification du contenu des page clientes
+/settings/page/formpage:
+  controller: Page
+  action: formpage
+
+#Validation des changements de la page
+/settings/page/update:
+  controller: Page
+  action: update
+
+#Affichage de la page pour gérer l'apparence des page clientes
 /settings/apparences:
   controller: Style
   action: list
@@ -96,6 +114,29 @@
   controller: Question
   action: create
 
+/settings/room/list:
+  controller: Room
+  action: list
+
+/settings/room/create:
+  controller: Room
+  action: create
+
+/settings/room/form:
+  controller: Room
+  action: formRoom
+
+/settings/service/create:
+  controller: Service
+  action: create
+
+/settings/service/form:
+  controller: Service
+  action: formService
+
+/settings/service/list:
+  controller: Service
+  action: list
 
 #---Actions---#
 
@@ -109,6 +150,15 @@
   controller: Question
   action: create
 
+/settings/create_hotel:
+  controller: Hotel
+  action: createHotel
+
+/add_hotel:
+  controller: Hotel
+  action: create
+
+
 #-----------Connexion admin HF / Dashboard Admin-----------#
 
 #Affichage de la vue
@@ -116,10 +166,20 @@
   controller: User
   action: default
 
-#Backoffice gestion des pages HF
+#Backoffice gestion des page HF
 /dashboard/mes-pages:
   controller: Page
-  action: list
+  action: default
+
+#Affichage de la modification du contenu des page clientes
+/dashboard/page/formpage:
+  controller: Page
+  action: formpage
+
+#Validation des changements de la page
+/dashboard/page/update:
+  controller: Page
+  action: update
 
 #Backoffice gestion de l'apprence du site HF
 /dashboard/apparences:
@@ -167,6 +227,11 @@
 /dashboard/comment_active:
   controller: Comment
   action: update
+
+#Afficher les commentaires sur l'accueil
+/dashboard/comment/delete:
+  controller: Comment
+  action: destroy
 
 #Lister les utilisateurs et leurs roles
 /dashboard/permissions:

@@ -62,12 +62,12 @@
   controller: User
   action: default
 
-#Affichage de la gestion des pages clientes
+#Affichage de la gestion des page clientes
 /settings/mes-pages:
   controller: Page
   action: list
 
-#Affichage de la page pour gérer l'apparence des pages clientes
+#Affichage de la page pour gérer l'apparence des page clientes
 /settings/apparences:
   controller: Style
   action: list
@@ -107,7 +107,7 @@
   controller: User
   action: default
 
-#Backoffice gestion des pages HF
+#Backoffice gestion des page HF
 /dashboard/mes-pages:
   controller: Page
   action: list

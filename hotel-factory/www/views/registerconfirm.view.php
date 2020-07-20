@@ -1,6 +1,7 @@
 <div>
     <h1>Inscription</h1>
-    <p>Votre compte à bien été enregistrer.<br/>
+    <p>
+        Votre compte a bien été enregistré.<br/>
         Merci de vérifier vos emails afin de valider votre compte.
     </p>
     </br>

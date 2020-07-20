@@ -13,6 +13,7 @@ class Hotel extends Model
     protected $country;
     protected $status;
     protected $route;
+    protected $idUser;
 
 
     /* SETTERS */
@@ -54,6 +55,13 @@ class Hotel extends Model
     {
         $this->route=$route;
     }
+
+    public function setIdUser($idUser)
+    {
+        $this->idUser=$idUser;
+    }
+
+
     /* GETTERS */
 
     public function getId()
@@ -70,14 +78,17 @@ class Hotel extends Model
     {
         return $this->address;
     }
+
     public function getZipcode()
     {
         return $this->zipcode;
     }
+
     public function getCity()
     {
         return $this->city;
     }
+
     public function getCountry()
     {
         return $this->country;
@@ -87,9 +98,15 @@ class Hotel extends Model
     {
         return $this->status;
     }
+
     public function getRoute()
     {
         return $this->route;
+    }
+
+    public function getIdUser()
+    {
+        return $this->idUser;
     }
 
 

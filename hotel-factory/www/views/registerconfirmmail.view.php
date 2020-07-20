@@ -1,6 +1,7 @@
 <div>
     <h1>Inscription</h1>
-    <p>Votre email à été validé avec succes<br/>
+    <p>
+        Votre email a été validé avec succès.<br/>
         Vous pouvez maintenant vous connecter à votre espace.
     </p>
     </br>

@@ -19,10 +19,14 @@ class ConfirmAccountMail {
             "body"=>[
                 "html" => "true",
                 "subject" => "Confirmation de votre compte",
-                "body" => "Bonjour et bienvenu $prenom! Afin de valider votre compte, veillez cliquer sur ce lien <a href=\"$url\">Confirmation</a> ou le copier dans un nouvel onglet : $url<br/>
-                          A bientot sur HotelFactory!",
-                "altBody" => "Bonjour et bienvenu $prenom! Afin de valider votre compte, veillez cliquer sur ce lien $url ou le copier dans un nouvel onglet <br/>
-                          A bientot sur HotelFactory!"
+                "body" => "Bonjour et bienvenue $prenom! </br> 
+                Afin de valider votre compte, veuillez <a href=\"$url\">cliquer-ici</a> ou le copiez le lien dans un nouvel onglet : 
+                </br>$url<br/>
+                À bientôt sur HotelFactory!",
+                "altBody" => "Bonjour et bienvenue $prenom! </br>
+                Afin de valider votre compte, veuillez <a href=\"$url\">cliquer-ici</a> ou le copier dans un nouvel onglet :
+                </br>$url<br/>
+                À bientôt sur HotelFactory!"
             ]
         ];
     }

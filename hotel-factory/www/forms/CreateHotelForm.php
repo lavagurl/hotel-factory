@@ -1,7 +1,7 @@
 <?php
 
-namespace HotelFactory\Forms;
-use HotelFactory\Core\Helper;
+namespace HotelFactory\forms;
+use HotelFactory\core\Helper;
 
 class CreateHotelForm {
 
@@ -9,8 +9,7 @@ class CreateHotelForm {
         return [
             "config"=>[
                 "method"=>"POST",
-                //"action"=>"/add_hotel",
-                //Helper::getUrl("Hotel", "create")
+                "action"=>Helper::getUrl("Hotel", "create"),
                 "submit"=>"Enregistrer mon hotel"
             ],
 

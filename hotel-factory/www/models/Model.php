@@ -19,6 +19,7 @@ class Model
         foreach ( $donnees as $key => $value) {
 
             $method = 'set'.$key;
+            $method = 'set'.ucfirst($key);
             if (method_exists($articleObj, $method)) {
                 $articleObj->$method($value);
             }

@@ -34,7 +34,7 @@ class Controller implements \SplSubject
 
     }
 
-    public function render(string $controller, string $template = "back", array $params = null)
+    public function render(string $controller, string $template, array $params = null)
     {
         $this->notify();
         $this->detach($this->event);
@@ -67,6 +67,8 @@ class Controller implements \SplSubject
             // $observer->logged($_SERVER['REQUEST_URI']);
         }
     }
+
+
 
 
 }
