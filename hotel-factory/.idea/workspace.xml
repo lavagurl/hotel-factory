@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="650156a1-3c60-4dc1-bb49-faccbeee88a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/hotel-factory-develop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aupetitparis/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aupetitparis/.idea/aupetitparis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aupetitparis/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aupetitparis/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aupetitparis/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/hotel-factory.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/controllers/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/controllers/HotelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/core/MiddleWareManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/core/MiddleWareManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/core/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/core/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/core/Tools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/core/events/ControllerEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/core/events/ControllerEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/forms/CreateHotelForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/forms/CreateHotelForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/forms/RegisterInternalUserForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/forms/RegisterInternalUserForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/mails/ConfirmAccountMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/mails/ConfirmAccountMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/mails/Mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/mails/Mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/managers/AnswerManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/managers/AnswerManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/managers/QuestionManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/managers/QuestionManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/middleware/RoleMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/middleware/RoleMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/equipment/list.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/equipment/list.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/home.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/home.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/modals/form.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/modals/form.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/modals/show_details.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/modals/show_details.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/modals/show_table.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/modals/show_table.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/room/list.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/room/list.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/room/show.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/room/show.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/service/list.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/service/list.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/service/show.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/service/show.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aupetitparis/views/templates/front.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/../aupetitparis/views/templates/front.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/auto.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/auto.cnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ca-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ca-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ca.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ca.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/client-cert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/client-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/client-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/client-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/db.opt" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/db.opt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_bed.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_bed.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_bed.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_bed.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_client_comment.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_client_comment.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_client_comment.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_client_comment.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_comment.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_comment.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_comment.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_comment.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_company.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_company.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_company.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_company.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_room.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_room.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_room.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_room.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_equipment_user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_answer.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_answer.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_answer.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_answer.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_question.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_question.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_question.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_faq_question.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_hotel.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_hotel.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_hotel.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_hotel.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_pages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_pages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_pages.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_pages.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_reservation.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_reservation.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_reservation.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_reservation.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_role.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_role.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_role.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_role.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room_user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_room_user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service_user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_service_user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_type_equipment.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_type_equipment.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_type_equipment.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_type_equipment.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/dbs351879/htlfac157896_user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_bed.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_bed.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_comment.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_comment.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_floor.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_floor.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_hotel.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_hotel.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_reservation.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_reservation.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_role.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_role.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_type_equipment.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_type_equipment.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_logfile1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/columns_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/columns_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/columns_priv.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/columns_priv.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/db.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/db.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/db.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/db.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/db.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/db.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/engine_cost.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/engine_cost.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/engine_cost.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/engine_cost.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/event.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/event.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/event.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/event.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/func.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/func.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/func.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/func.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/general_log.CSM" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/general_log.CSM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/general_log.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/general_log.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/gtid_executed.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/gtid_executed.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/gtid_executed.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/gtid_executed.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_category.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_category.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_category.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_category.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_keyword.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_keyword.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_keyword.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_keyword.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_relation.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_relation.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_relation.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_relation.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_topic.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_topic.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/help_topic.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/help_topic.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/ndb_binlog_index.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/ndb_binlog_index.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/ndb_binlog_index.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/ndb_binlog_index.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/plugin.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/plugin.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/plugin.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/plugin.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/proc.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/proc.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/proc.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/proc.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/proc.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/proc.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/procs_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/procs_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/procs_priv.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/procs_priv.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/proxies_priv.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/proxies_priv.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/proxies_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/proxies_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/proxies_priv.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/proxies_priv.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/server_cost.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/server_cost.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/server_cost.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/server_cost.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/servers.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/servers.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/servers.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/servers.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slave_master_info.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slave_master_info.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slave_master_info.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slave_master_info.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slave_relay_log_info.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slave_relay_log_info.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slave_relay_log_info.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slave_relay_log_info.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slave_worker_info.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slave_worker_info.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slave_worker_info.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slave_worker_info.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slow_log.CSM" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slow_log.CSM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/slow_log.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/slow_log.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/tables_priv.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/tables_priv.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/tables_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/tables_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/tables_priv.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/tables_priv.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_leap_second.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_leap_second.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_leap_second.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_leap_second.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_name.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_name.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_transition.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_transition.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_transition.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_transition.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_transition_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_transition_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/time_zone_transition_type.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/time_zone_transition_type.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/user.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/user.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/user.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/user.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/accounts.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/accounts.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/cond_instances.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/cond_instances.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_current.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_current.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_history.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_history.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_history_long.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_history_long.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_account_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_host_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_thread_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_user_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_global_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_stages_summary_global_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_current.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_current.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_history.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_history.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_history_long.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_history_long.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_account_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_digest.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_digest.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_host_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_program.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_program.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_thread_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_user_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_global_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_statements_summary_global_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_current.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_current.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_history.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_history.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_history_long.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_history_long.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_account_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_host_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_thread_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_user_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_global_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_transactions_summary_global_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_current.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_current.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_history.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_history.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_history_long.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_history_long.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_account_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_host_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_instance.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_instance.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_thread_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_user_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_global_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/events_waits_summary_global_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/file_instances.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/file_instances.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/file_summary_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/file_summary_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/file_summary_by_instance.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/file_summary_by_instance.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/global_status.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/global_status.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/global_variables.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/global_variables.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/host_cache.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/host_cache.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/hosts.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/hosts.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_account_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_account_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_host_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_host_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_thread_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_thread_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_user_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_by_user_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_global_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/memory_summary_global_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/metadata_locks.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/metadata_locks.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/mutex_instances.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/mutex_instances.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/objects_summary_global_by_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/objects_summary_global_by_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/performance_timers.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/performance_timers.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/prepared_statements_instances.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/prepared_statements_instances.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_configuration.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_configuration.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_status.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_status.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_status_by_coordinator.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_status_by_coordinator.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_status_by_worker.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_applier_status_by_worker.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_connection_configuration.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_connection_configuration.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_connection_status.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_connection_status.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_group_member_stats.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_group_member_stats.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/replication_group_members.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/replication_group_members.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/rwlock_instances.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/rwlock_instances.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/session_account_connect_attrs.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/session_account_connect_attrs.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/session_connect_attrs.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/session_connect_attrs.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/session_status.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/session_status.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/session_variables.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/session_variables.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/setup_actors.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/setup_actors.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/setup_consumers.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/setup_consumers.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/setup_instruments.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/setup_instruments.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/setup_objects.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/setup_objects.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/setup_timers.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/setup_timers.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/socket_instances.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/socket_instances.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/socket_summary_by_event_name.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/socket_summary_by_event_name.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/socket_summary_by_instance.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/socket_summary_by_instance.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/status_by_account.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/status_by_account.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/status_by_host.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/status_by_host.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/status_by_thread.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/status_by_thread.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/status_by_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/status_by_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/table_handles.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/table_handles.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/table_io_waits_summary_by_index_usage.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/table_io_waits_summary_by_index_usage.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/table_io_waits_summary_by_table.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/table_io_waits_summary_by_table.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/table_lock_waits_summary_by_table.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/table_lock_waits_summary_by_table.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/threads.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/threads.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/user_variables_by_thread.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/user_variables_by_thread.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/users.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/users.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/performance_schema/variables_by_thread.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/performance_schema/variables_by_thread.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/private_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/private_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/public_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/public_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/server-cert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/server-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/server-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/server-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/host_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/host_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/host_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/host_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/host_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/host_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/host_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/host_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/host_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/host_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/host_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/host_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/innodb_buffer_stats_by_schema.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/innodb_buffer_stats_by_schema.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/innodb_buffer_stats_by_table.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/innodb_buffer_stats_by_table.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/innodb_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/innodb_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/io_by_thread_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/io_by_thread_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/io_global_by_file_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/io_global_by_file_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/io_global_by_file_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/io_global_by_file_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/io_global_by_wait_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/io_global_by_wait_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/io_global_by_wait_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/io_global_by_wait_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/latest_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/latest_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/memory_by_host_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/memory_by_host_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/memory_by_thread_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/memory_by_thread_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/memory_by_user_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/memory_by_user_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/memory_global_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/memory_global_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/memory_global_total.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/memory_global_total.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/metrics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/metrics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/processlist.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/processlist.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/ps_check_lost_instrumentation.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/ps_check_lost_instrumentation.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_auto_increment_columns.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_auto_increment_columns.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_index_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_index_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_object_overview.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_object_overview.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_redundant_indexes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_redundant_indexes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_table_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_table_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_table_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_table_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_table_statistics_with_buffer.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_table_statistics_with_buffer.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_tables_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_tables_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/schema_unused_indexes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/schema_unused_indexes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/session.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/session.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/session_ssl_status.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/session_ssl_status.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/statement_analysis.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/statement_analysis.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/statements_with_errors_or_warnings.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/statements_with_errors_or_warnings.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/statements_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/statements_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/statements_with_runtimes_in_95th_percentile.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/statements_with_runtimes_in_95th_percentile.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/statements_with_sorting.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/statements_with_sorting.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/statements_with_temp_tables.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/statements_with_temp_tables.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/sys_config.TRG" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/sys_config.TRG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/sys_config.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/sys_config.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/sys_config.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/sys_config.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/user_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/user_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/user_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/user_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/user_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/user_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/user_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/user_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/user_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/user_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/user_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/user_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/version.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/version.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/wait_classes_global_by_avg_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/wait_classes_global_by_avg_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/wait_classes_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/wait_classes_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/waits_by_host_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/waits_by_host_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/waits_by_user_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/waits_by_user_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/waits_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/waits_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024host_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024host_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024host_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024innodb_buffer_stats_by_schema.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024innodb_buffer_stats_by_schema.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024innodb_buffer_stats_by_table.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024innodb_buffer_stats_by_table.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024innodb_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024innodb_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024io_by_thread_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024io_by_thread_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_file_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_file_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_file_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_file_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_wait_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_wait_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_wait_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024io_global_by_wait_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024latest_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024latest_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024memory_by_host_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024memory_by_host_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024memory_by_thread_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024memory_by_thread_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024memory_by_user_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024memory_by_user_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024memory_global_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024memory_global_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024memory_global_total.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024memory_global_total.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024processlist.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024processlist.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024ps_digest_95th_percentile_by_avg_us.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024ps_digest_95th_percentile_by_avg_us.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024ps_digest_avg_latency_distribution.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024ps_digest_avg_latency_distribution.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024ps_schema_table_statistics_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024ps_schema_table_statistics_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024schema_flattened_keys.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024schema_flattened_keys.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024schema_index_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024schema_index_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024schema_table_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024schema_table_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024schema_table_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024schema_table_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024schema_table_statistics_with_buffer.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024schema_table_statistics_with_buffer.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024schema_tables_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024schema_tables_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024session.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024session.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024statement_analysis.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024statement_analysis.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_errors_or_warnings.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_errors_or_warnings.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_runtimes_in_95th_percentile.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_runtimes_in_95th_percentile.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_sorting.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_sorting.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_temp_tables.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024statements_with_temp_tables.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024user_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024user_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024user_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024wait_classes_global_by_avg_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024wait_classes_global_by_avg_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024wait_classes_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024wait_classes_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024waits_by_host_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024waits_by_host_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024waits_by_user_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024waits_by_user_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/sys/x@0024waits_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/sys/x@0024waits_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/HotelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/mails/ConfirmAccountMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/mails/ConfirmAccountMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/modals/show_table_comments.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/modals/show_table_comments.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/registerconfirm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/registerconfirm.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/registerconfirmmail.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/registerconfirmmail.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/back.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/back.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/front.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/front.tpl.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1dlC2Sd1Gty8E7aHEbirMMRl5B5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/core" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\core" />
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\views\hotelfactory\modals" />
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\controllers" />
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\forms" />
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\managers" />
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\views\hotelfactory\admin" />
+      <recent name="C:\Users\soztas\Desktop\hotel-factory-develop\www\views\hotelfactory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.show_details_hotel.mod.php">
+    <configuration name="show_details_hotel.mod.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hotel-factory-develop/www/views/modals/show_details_hotel.mod.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="show_comments.mod.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/www/views/hotelfactory/modals/show_comments.mod.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.show_details_hotel.mod.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="650156a1-3c60-4dc1-bb49-faccbeee88a7" name="Default Changelist" comment="" />
+      <created>1592990086211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592990086211</updated>
+      <workItem from="1592990089008" duration="12977000" />
+      <workItem from="1593297178484" duration="24941000" />
+      <workItem from="1593542695811" duration="1187000" />
+      <workItem from="1593561088519" duration="2703000" />
+      <workItem from="1593564008859" duration="1058000" />
+      <workItem from="1593566178559" duration="1083000" />
+      <workItem from="1593567281142" duration="308000" />
+      <workItem from="1593567820624" duration="1518000" />
+      <workItem from="1593569485109" duration="3850000" />
+      <workItem from="1593607275565" duration="22711000" />
+      <workItem from="1593719497073" duration="6080000" />
+      <workItem from="1593821321186" duration="908000" />
+      <workItem from="1593940915801" duration="13570000" />
+      <workItem from="1594378837248" duration="14271000" />
+      <workItem from="1594422325118" duration="10014000" />
+      <workItem from="1594479369523" duration="10044000" />
+      <workItem from="1594515925614" duration="3333000" />
+      <workItem from="1594548362160" duration="13492000" />
+      <workItem from="1594637285955" duration="25577000" />
+      <workItem from="1594685097715" duration="16000" />
+      <workItem from="1594685834614" duration="1612000" />
+      <workItem from="1594687493530" duration="317000" />
+      <workItem from="1594687930746" duration="3581000" />
+      <workItem from="1595081494276" duration="17332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="222" y="0" key="#CLI_Interpreters" timestamp="1593562845644">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="222" y="0" key="#CLI_Interpreters/0.0.1280.680@0.0.1280.680" timestamp="1593562845644" />
+    <state x="435" y="74" key="#Docker" timestamp="1593562737236">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="435" y="74" key="#Docker/0.0.1280.680@0.0.1280.680" timestamp="1593562737236" />
+    <state x="741" y="94" key="#Inspections" timestamp="1593262178100">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="741" y="94" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1593262178100" />
+    <state x="817" y="231" width="602" height="496" key="#Notifications" timestamp="1592990602101">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="817" y="231" width="602" height="496" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1592990602101" />
+    <state x="349" y="0" key="#PHP" timestamp="1593565415906">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="0" key="#PHP/0.0.1280.680@0.0.1280.680" timestamp="1593565415906" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594642096190">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1594642096190" />
+    <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592990572848" />
+    <state x="702" y="179" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594663155774">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="702" y="179" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594663155774" />
+    <state x="842" y="217" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1593377507962" />
+    <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593616627516">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1593616627516" />
+    <state x="706" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594480879302">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="706" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594480879302" />
+    <state x="847" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593373873444" />
+    <state x="351" y="23" key="#show_comments.mod.php" timestamp="1593565666483">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="351" y="23" key="#show_comments.mod.php/0.0.1280.680@0.0.1280.680" timestamp="1593565666483" />
+    <state x="422" y="95" key="FileChooserDialogImpl" timestamp="1593568413950">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="422" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593568413950" />
+    <state width="918" height="210" key="GridCell.Tab.0.bottom" timestamp="1593258822410">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="918" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593258822410" />
+    <state width="918" height="210" key="GridCell.Tab.0.center" timestamp="1593258822410">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="918" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593258822410" />
+    <state width="918" height="210" key="GridCell.Tab.0.left" timestamp="1593258822409">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="918" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593258822409" />
+    <state width="918" height="210" key="GridCell.Tab.0.right" timestamp="1593258822410">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="918" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593258822410" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1592990616326">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1592990616326" />
+    <state x="865" y="138" key="NewPhpClassDialog" timestamp="1593262189686">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="865" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1593262189686" />
+    <state x="952" y="339" key="NewPhpFileDialog" timestamp="1593375880715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="952" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1593375880715" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1594674561971">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674561971" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1593375152382">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1593375152382" />
+    <state x="480" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594665589615">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="480" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680@0.0.1280.680" timestamp="1594665589615" />
+    <state x="581" y="156" key="run.anything.popup" timestamp="1593564032835">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="581" y="156" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1593564032835" />
+    <state x="697" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1593380855978" />
+    <state x="770" y="72" width="672" height="676" key="search.everywhere.popup" timestamp="1595083272051">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="642" y="59" width="672" height="558" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594675774295" />
+    <state x="770" y="72" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595083272051" />
+  </component>
+</project>

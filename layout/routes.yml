@@ -1,0 +1,81 @@
+#-----------Général-----------#
+
+#Redirection sur la page home
+/:
+  controller: Home
+  action: default
+
+#Affichge de la page Home
+/home:
+  controller: Home
+  action: default
+
+#Affichage de la page pour se connecter
+/se-connecter:
+  controller: User
+  action: login
+
+#Affichage de la page pour se déconnecter
+/se-deconnecter:
+  controller: User
+  action: logout
+
+#Affichage de la page pour s'inscrire
+/s-inscrire:
+  controller: User
+  action: register
+
+/confirmation:
+  controller: User
+  action: registerConfirm
+
+/se-connecter/verifications:
+  controller: User
+  action: logCheck
+
+#Affichage de la page en cas d'erreur 404
+/vous-etes-perdu:
+  controller: Errors
+  action: quatreCentQuatre
+
+#Affichage de la page de profil
+/profile:
+    controller: User
+    action: index
+
+
+#Modifier son profil
+/profile/update:
+  controller: User
+  action: update
+
+
+
+
+/create_hotel:
+  controller: DashboardUser
+  action: createHotel
+
+/add_hotel:
+  controller: Hotel
+  action: create
+
+/room/list:
+  controller: Room
+  action: list
+
+/room/show:
+  controller: Room
+  action: show
+
+/service/list:
+  controller: Service
+  action: list
+
+/comment/list:
+  controller: Comment
+  action: list
+
+/home/contact:
+  controller: Home
+  action: contact
