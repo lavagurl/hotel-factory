@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21949a94-400c-4606-9421-c28a2803b350" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/www/controllers/PageBuilderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/forms/PageBuilderForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/views/admin/dashboard/pagebuilder.view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/views/modals/form_pagebuilder.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_bed.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_bed.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_comment.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_comment.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_equipment_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_floor.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_floor.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_hotel.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_hotel.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_reservation.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_reservation.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_role.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_role.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_room_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_service_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_type_equipment.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_type_equipment.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/dbs366973/dem259875_user.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/db_data/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/server/php.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/.env" beforeDir="false" afterPath="$PROJECT_DIR$/www/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Connection/BDDInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/connection/BDDInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Connection/PDOConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/connection/PDOConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Connection/PDOResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/connection/PDOResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Connection/ResultInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/connection/ResultInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/DashboardAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/DashboardAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/DashboardUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/DashboardUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/ErrorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/ErrorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/ConstantLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/ConstantLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/QueryBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Validator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/forms/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/forms/LoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/forms/RegisterForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/forms/RegisterForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/managers/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/managers/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/php-cs-fixer-v2.phar" beforeDir="false" afterPath="$PROJECT_DIR$/www/php-cs-fixer-v2.phar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/admin/dashboard/comments.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/admin/dashboard/comments.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/admin/dashboard/permissions.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/admin/dashboard/permissions.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/home.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/home.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/modals/form.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/modals/form.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/back.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/back.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/templates/front.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/templates/front.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/user/dashboard/home.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/user/dashboard/home.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/views/user/dashboard/settings.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/views/user/dashboard/settings.view.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eeDcTlFQg7FrEZrgIeNNVkPHsK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21949a94-400c-4606-9421-c28a2803b350" name="Default Changelist" comment="" />
+      <created>1594673244503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594673244503</updated>
+      <workItem from="1594673253655" duration="2293000" />
+      <workItem from="1594715709185" duration="6869000" />
+      <workItem from="1594738030830" duration="1018000" />
+      <workItem from="1594739098147" duration="1280000" />
+      <workItem from="1594747222022" duration="11056000" />
+      <workItem from="1594800041371" duration="1183000" />
+      <workItem from="1594820851707" duration="2601000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="652" y="192" width="545" height="561" key="NewPhpClassDialog" timestamp="1594673416292">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="652" y="192" width="545" height="561" key="NewPhpClassDialog/67.27.1853.923@67.27.1853.923" timestamp="1594673416292" />
+    <state x="725" y="398" width="399" height="149" key="NewPhpFileDialog" timestamp="1594755166477">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="725" y="398" width="399" height="149" key="NewPhpFileDialog/67.27.1853.923@67.27.1853.923" timestamp="1594755166477" />
+  </component>
+</project>
