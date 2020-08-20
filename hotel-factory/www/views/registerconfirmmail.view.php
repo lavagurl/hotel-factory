@@ -1,3 +1,6 @@
+<?php
+    use HotelFactory\core\Helper;
+?>
 <div>
     <h1>Inscription</h1>
     <p>
@@ -5,7 +8,7 @@
         Vous pouvez maintenant vous connecter à votre espace.
     </p>
     </br>
-    <a href="/se-connecter">Se connecter</a>
+    <a href="<?= Helper::getUrl("User","login")?>">Se connecter</a>
     </br>
-    <a href="/home">Retour à l'accueil</a>
+    <a href="<?= Helper::getUrl("Home","default")?>">Retour à l'accueil</a>
 </div>

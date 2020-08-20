@@ -76,6 +76,11 @@ class Validator
         return $date >= $birthdate;
     }
 
+    private function checkPrice($price)
+    {
+        if(is_numeric($price)) return true;
+    }
+
     private function uniq($data,$table)
     {
         $requete = new QueryBuilder(User::class, $table["table"]);

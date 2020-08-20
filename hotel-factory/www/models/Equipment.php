@@ -19,11 +19,12 @@ class Equipment extends Model
 
     public function setName($name)
     {
-        $this->name=$name;
+        $this->name=strip_tags($name);
     }
 
-    public function setDescription($description){
-        $this->description=$description;
+    public function setDescription($description)
+    {
+        $this->description=strip_tags($description);
     }
 
     public function setIdTypeEquipment($idTypeEquipment)
@@ -89,5 +90,3 @@ class Equipment extends Model
     }
 
 }
-
-?>

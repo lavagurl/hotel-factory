@@ -21,17 +21,24 @@ class Page extends Model
 
     public function setTitle($title)
     {
-        $this->title = $title;
+        $this->title = strip_tags($title);
     }
 
     public function setAddress($address)
     {
-        $this->address = $address;
+        $this->address = strip_tags($address);
     }
 
     public function setContent($content)
     {
-        $this->content = $content;
+        $this->content =strip_tags($content,['a','abbr','address','area','article','aside','audio',
+        'b','base','bdo','blockquote','br','button','canvas','caption','cite','code','col','colgroup',
+        'command','datalist','dd','del','details','dfn','div','dl','dt','em','embed','fieldset','figcaption',
+        'figure','footer','form','h1','h2','h3','h4','h5','h6','head','header','hgroup','hr','i','iframe',
+        'img','input','ins','keygen','kbd','label','legend','li','link','map','mark','math','menu','meter',
+        'nav','object','ol','optgroup','option','output','p','param','pre','progress','q','samp','section',
+        'select','small','source','span','strong','style','sub','summary','sup','svg','table','tbody','td',
+        'textarea','tfoot','th','thead','time','title','tr','track','ul','var','video','wbr']);
     }
 
     public function setIdHotel($idhotel)

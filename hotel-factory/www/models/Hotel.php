@@ -25,26 +25,27 @@ class Hotel extends Model
 
     public function setName($name)
     {
-        $this->name=$name;
+        $this->name=strip_tags($name);
     }
 
-    public function setAddress($address){
-        $this->address=$address;
+    public function setAddress($address)
+    {
+        $this->address=strip_tags($address);
     }
 
     public function setZipcode($zipcode)
     {
-        $this->zipcode=$zipcode;
+        $this->zipcode=strip_tags($zipcode);
     }
 
     public function setCity($city)
     {
-        $this->city=$city;
+        $this->city=strip_tags($city);
     }
 
     public function setCountry($country)
     {
-        $this->country=$country;
+        $this->country=strip_tags($country);
     }
     public function setStatus($status)
     {
@@ -53,7 +54,7 @@ class Hotel extends Model
 
     public function setRoute($route)
     {
-        $this->route=$route;
+        $this->route=strip_tags($route);
     }
 
     public function setIdUser($idUser)
@@ -183,5 +184,3 @@ class Hotel extends Model
 
 
 }
-
-?>

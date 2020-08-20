@@ -20,16 +20,17 @@ class Room extends Model
 
     public function setName($name)
     {
-        $this->name=$name;
+        $this->name=strip_tags($name);
     }
 
-    public function setDescription($description){
-        $this->description=$description;
+    public function setDescription($description)
+    {
+        $this->description=strip_tags($description);
     }
 
     public function setPrice($price)
     {
-        $this->price=$price;
+        $this->price=strip_tags($price);
     }
 
     public function setIdHotel($idHotel)
@@ -101,5 +102,3 @@ class Room extends Model
     }
 
 }
-
-?>

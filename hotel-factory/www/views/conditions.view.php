@@ -1,5 +1,8 @@
+<?php
+    use HotelFactory\core\Helper;
+?>
 <div>
-    <a href="/">Retourner à l'accueil</a>
+    <a href="<?= Helper::getUrl("Home","default")?>">Retourner à l'accueil</a>
 </div>
 
 <div>

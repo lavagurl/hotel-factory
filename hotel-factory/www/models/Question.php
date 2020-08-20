@@ -18,14 +18,16 @@ class Question extends Model
 
     public function setQuestion($question)
     {
-        $this->question=$question;
+        $this->question=strip_tags($question);
     }
 
-    public function setIdHfUser($idHfUser){
+    public function setIdHfUser($idHfUser)
+    {
         $this->idHfUser=$idHfUser;
     }
 
-    public function setStatus($status){
+    public function setStatus($status)
+    {
         $this->status=$status;
     }
 
@@ -82,5 +84,3 @@ class Question extends Model
     }
 
 }
-
-?>

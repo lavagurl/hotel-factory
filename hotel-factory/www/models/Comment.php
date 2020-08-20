@@ -20,10 +20,11 @@ class Comment extends Model
 
     public function setMessage($message)
     {
-        $this->message=$message;
+        $this->message=strip_tags($message);
     }
 
-    public function setIdHfUser($idHfUser){
+    public function setIdHfUser($idHfUser)
+    {
         $this->idHfUser=$idHfUser;
     }
 
@@ -92,5 +93,3 @@ class Comment extends Model
     }
 
 }
-
-?>

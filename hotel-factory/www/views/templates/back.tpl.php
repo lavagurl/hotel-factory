@@ -1,3 +1,6 @@
+<?php
+    use HotelFactory\core\Helper;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,30 +13,30 @@
 <body>
 <div>
     <ul>
-        <li> <a href="/profile">Mon profil</a> </li>
-        <li> <a href="/se-deconnecter">Se déconnecter</a> </li>
+        <li> <a href="<?= Helper::getUrl("User","index")?>">Mon profil</a> </li>
+        <li> <a href="<?= Helper::getUrl("User","logout")?>">Se déconnecter</a> </li>
     </ul>
 </div>
 <ul>
     <?php if($_SESSION['role'] == 1): ?>
-        <li> <a href="/dashboard">Accueil</a> </li>
-        <li> <a href="/dashboard/mes-pages">Mes pages</a> </li>
-        <li> <a href="/dashboard/comments">Commentaires</a> </li>
-        <li> <a href="/dashboard/permissions">Permissions</a> </li>
-        <li> <a href="/dashboard/faq">FAQ</a> </li>
-        <li> <a href="/dashboard/hotels">Hotels</a> </li>
+        <li> <a href="<?= Helper::getUrl("User","default")?>">Accueil</a> </li>
+        <li> <a href="<?= Helper::getUrl("Page","default")?>">Mes pages</a> </li>
+        <li> <a href="<?= Helper::getUrl("Comment","list")?>">Commentaires</a> </li>
+        <li> <a href="<?= Helper::getUrl("User","list")?>">Permissions</a> </li>
+        <li> <a href="<?= Helper::getUrl("Question","list")?>">FAQ</a> </li>
+        <li> <a href="<?= Helper::getUrl("Hotel","list")?>">Hotels</a> </li>
     <?php elseif($_SESSION['role'] == 2): ?>
 
-        <li> <a href="/settings">Accueil</a> </li>
-        <li> <a href="/settings/mes-pages">Mes pages</a> </li>
-        <li> <a href="/settings/create_hotel">Mon hotel</a> </li>
-        <li> <a href="/settings/parametres">Paramètres</a> </li>
-        <li> <a href="/settings/faq">FAQ</a> </li>
+        <li> <a href="<?= Helper::getUrl("User","default")?>">Accueil</a> </li>
+        <li> <a href="<?= Helper::getUrl("Page","default")?>">Mes pages</a> </li>
+        <li> <a href="<?= Helper::getUrl("Hotel","createHotel")?>">Mon hotel</a> </li>
+        <li> <a href="<?= Helper::getUrl("Comment","formComment")?>">Paramètres</a> </li>
+        <li> <a href="<?= Helper::getUrl("Question","list")?>">FAQ</a> </li>
 
     <?php elseif($_SESSION['role'] == 3): ?>
-        <li> <a href="/dashboard">Accueil</a> </li>
-        <li> <a href="/dashboard/comments">Commentaires</a> </li>
-        <li> <a href="/dashboard/faq">FAQ</a> </li>
+        <li> <a href="<?= Helper::getUrl("User","default")?>">Accueil</a> </li>
+        <li> <a href="<?= Helper::getUrl("Comment","list")?>">Commentaires</a> </li>
+        <li> <a href="<?= Helper::getUrl("Question","list")?>">FAQ</a> </li>
     <?php endif; ?>
 </ul>
 

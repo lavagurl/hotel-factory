@@ -1,11 +1,14 @@
-<?php if(isset($id)): ?>
+<?php
+    use HotelFactory\core\Helper;
+    if(isset($id)): 
+?>
 <div>
     <h1>Administration de mon hotel</h1>
-    <a href="/settings/room/form">Créer une chambre</a>
-    <a href="/settings/room/list">Liste des chambres</a>
+    <a href="<?= Helper::getUrl("Room","formRoom")?>">Créer une chambre</a>
+    <a href="<?= Helper::getUrl("Room","list")?>">Liste des chambres</a>
     <br>
-    <a href="/settings/service/form">Créer un service</a>
-    <a href="/settings/service/list">Liste des services</a>
+    <a href="<?= Helper::getUrl("Service","formService")?>">Créer un service</a>
+    <a href="<?= Helper::getUrl("Service","list")?>">Liste des services</a>
 </div>
 <?php else : ?>
 <div>
