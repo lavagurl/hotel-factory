@@ -10,7 +10,9 @@ class AddCommentsForm {
             "config"=>[
                 "method"=>"POST",
                 "action"=>Helper::getUrl("Comment", "create"),
-                "submit"=>"Envoyer"
+                "submit"=>"Envoyer",
+                "id"=>'test',
+                "class"=>''
             ],
 
             "fields"=>[

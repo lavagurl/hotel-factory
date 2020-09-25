@@ -41,7 +41,7 @@
 #Affichage de la page de profil
 /profile:
   controller: User
-  action: index
+  action: index 
 
 
 #Modifier son profil
@@ -73,11 +73,19 @@
 /settings:
   controller: User
   action: default
+  role: 2;3
 
 #Affichage de la gestion des page clientes
 /settings/mes-pages:
   controller: Page
   action: default
+
+#Affichage de la gestion des page clientes
+/settings/comment/list:
+  controller: Comment
+  action: list
+  role: 2;3
+
 
 #Affichage de la gestion des informations de l'hotel
 /settings/update_hotel:
@@ -94,10 +102,27 @@
   controller: Page
   action: formpage
 
-#Validation des changements de la page
+  #Validation des changements de la page
 /settings/page/update:
   controller: Page
   action: update
+
+
+  #Affichage formulaire creation de page 
+/settings/page/formCreate:
+  controller: Page
+  action: formCreatePage
+
+
+  #Affichage formulaire creation de page 
+/settings/page/create:
+  controller: Page
+  action: create
+  
+/settings/page/status:
+  controller: Page
+  action: status
+
 
 #Affichage de la page pour gérer l'apparence des page clientes
 /settings/apparences:
@@ -123,6 +148,7 @@
 /settings/faq/create:
   controller: Question
   action: create
+  role: 2
 
 /settings/room/list:
   controller: Room
@@ -131,6 +157,10 @@
 /settings/room/edit:
   controller: Room
   action: edit
+
+/settings/room/status:
+  controller: Room
+  action: status
 
 /settings/room/create:
   controller: Room
@@ -172,12 +202,24 @@
   controller: Service
   action: delete
 
+  
+/settings/service/status:
+  controller: Service
+  action: status
+
 #---Actions---#
 
 #Créer un commentaire
 /settings/parametres/add_comment:
   controller: Comment
   action: comment
+  
+
+#Signal
+/settings/comment_active:
+  controller: Comment
+  action: update
+
 
 #Ajouter une question
 /settings/faq/add_question:
@@ -187,10 +229,34 @@
 /settings/create_hotel:
   controller: Hotel
   action: createHotel
+ 
 
 /add_hotel:
   controller: Hotel
   action: create
+  role: 2
+
+/settings/permissions:
+  controller: User
+  action: list
+
+/settings/user/moderator:
+  controller: User
+  action: formRegisterModerator
+  
+/settings/user/add_moderator:
+  controller: User
+  action: create
+
+#Changer le role d'un user
+/settings/perm_modify:
+  controller: User
+  action: update  
+
+/settings/hotel/delete:
+  controller: Hotel
+  action: delete
+  role: 2  
 
 
 #-----------Connexion admin HF / Dashboard Admin-----------#
@@ -199,6 +265,7 @@
 /dashboard:
   controller: User
   action: default
+  role: 1
 
 #Backoffice gestion des page HF
 /dashboard/mes-pages:
@@ -250,6 +317,14 @@
   controller: Answer
   action: show
 
+/dashboard/user/moderator:
+  controller: User
+  action: formRegisterModerator
+  
+/dashboard/user/add_moderator:
+  controller: User
+  action: create
+
 #---Actions---#
 
 #Lister les commentaires des utilisateurs
@@ -257,16 +332,31 @@
   controller: Comment
   action: list
 
+
+#Lister les commentaires signalés des clients
+/dashboard/comment/signal:
+  controller: Comment
+  action: signal
+
+/dashboard/comment/valid:
+  controller: Comment
+  action: verified
+
+
 #Afficher les commentaires sur l'accueil
 /dashboard/comment_active:
   controller: Comment
   action: update
+  role: 3
 
 #Afficher les commentaires sur l'accueil
 /dashboard/comment/delete:
   controller: Comment
   action: destroy
 
+
+
+  
 #Lister les utilisateurs et leurs roles
 /dashboard/permissions:
   controller: User

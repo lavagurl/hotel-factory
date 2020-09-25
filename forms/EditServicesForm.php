@@ -25,7 +25,8 @@ class EditServicesForm {
                     "placeholder"=>"Nom du service",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "class"=>"form-control form-control-user"
                 ],
 
                 "description"=>[
@@ -33,12 +34,14 @@ class EditServicesForm {
                     "placeholder"=>"Description du service",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "class"=>"form-control form-control-user"
                 ],
                 "price"=>[
                     "type"=>"number",
                     "placeholder"=>"prix",
                     "required"=>true,
+                    "class"=>"form-control form-control-user"
                 ]
             ]
         ];

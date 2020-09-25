@@ -19,18 +19,18 @@ class LoginForm {
                 "email"=>[
                     "type"=>"email",
                     "placeholder"=>"Votre email",
-                    "class"=>"form-control form-control-user",
+                    "class"=>"form-control form-control-user input-center",
                     "id"=>"",
                     "required"=>true,
-                    "errorMsg"=>"identifiant ou mot de passe incorrect"
+                    "errorMsg"=>""
                 ],
                 "password"=>[
                     "type"=>"password",
                     "placeholder"=>"Votre mot de passe",
-                    "class"=>"form-control form-control-user",
+                    "class"=>"form-control form-control-user input-center",
                     "id"=>"",
                     "required"=>true,
-                    "errorMsg"=>"identifiant ou mot de passe incorrect"
+                    "errorMsg"=>"Votre mot de passe n'est pas conforme"
                 ],
             ]
         ];

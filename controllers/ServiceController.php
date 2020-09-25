@@ -17,7 +17,7 @@ class ServiceController extends Controller
     /* Afficher les Services */
     public function listAction(){
         $serviceManager = new ServiceManager();
-        $services = $serviceManager->findAll();
+        $services = $serviceManager->findBy(array("idHotel"=>$_SESSION['hotel']));
         $configTableServices = Service::showServiceTable($services);
         $myView = new View("{$_SESSION['dir']}/service/list", "back");
         $myView->assign("configTableService", $configTableServices);
@@ -82,6 +82,24 @@ class ServiceController extends Controller
         header("Location: /settings/service/list");
     }
 
-
+    
+    public function statusAction()
+    {
+        if(isset($_GET) && !(empty($_GET)))
+        {
+        $serviceManager = new ServiceManager();
+        $service = $serviceManager->find($_GET['id']);
+            echo $_GET['status'];
+        
+        if($_GET["status"]==0){
+            $service->setStatus(1);
+        }else{
+            $service->setStatus(0);
+            print_r($service);
+        }
+        $serviceManager->save($service);
+        }
+        $this->redirectTo('Service','list'); 
+    }
 
 }

@@ -1,4 +1,4 @@
 <div>
-    <h1>Nos chambres</h1>
+    <h1>Settings</h1>
     <?php $this->addModal("show", $config); ?>
 </div>

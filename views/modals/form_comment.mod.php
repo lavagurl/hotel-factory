@@ -1,7 +1,6 @@
 <?php
 
 $inputData = $GLOBALS["_".strtoupper($data["config"]["method"])];
-
 ?>
 
 <form method="<?= $data["config"]["method"]?>"

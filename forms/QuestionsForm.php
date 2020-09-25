@@ -8,6 +8,8 @@ class QuestionsForm {
     public static function getForm(){
         return [
             "config"=>[
+                "id"=>"",
+                "class"=>"",
                 "method"=>"POST",
                 "action"=>Helper::getUrl("Question", "create"),
                 "submit"=>"Envoyer"

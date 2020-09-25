@@ -11,6 +11,7 @@ class Page extends Model
     protected $address;
     protected $content;
     protected $idhotel;
+    protected $status;
 
     /* SETTERS */
 
@@ -37,6 +38,12 @@ class Page extends Model
     public function setIdHotel($idhotel)
     {
         $this->idHotel = $idhotel;
+    }
+
+    
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
     /* GETTERS */
@@ -66,6 +73,10 @@ class Page extends Model
         return $this->idHotel;
     }
 
+    public function getStatus()
+    {
+        return $this->status;
+    }
     public static function showPageTable($pages)
     {
         $hotelManager = new HotelManager;
@@ -79,9 +90,8 @@ class Page extends Model
             $tabPages[] = [
                 "id" => $page->getId(),
                 "title" => $page->getTitle(),
-                "address" => $page->getAddress(),
-                //"content" => $page->getContent(),
-                //"idHotel" => $hotel->getName()
+                "status" => $page->getStatus(),
+                "address" => $page->getAddress() 
             ];
 
         }
@@ -89,9 +99,7 @@ class Page extends Model
             "colonnes"=>[
                 "Id",
                 "Titre de la page",
-                "Addresse de la page",
-                //"Content",
-                //"IdHotel"
+                
             ],
 
             "fields"=>[

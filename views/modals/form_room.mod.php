@@ -11,7 +11,7 @@ $inputData = $GLOBALS["_".strtoupper($data["config"]["method"])];
     <?php foreach ($data["fields"] as $name => $configField):?>
         <div class="form-group row">
             <div class="col-sm-12">
-                <input hidden=hidden type="text" value="<?= $_SESSION['hotel'] ?>" name="idHotel"/>
+                <input hidden="hidden type="text" value="<?= $_SESSION['hotel'] ?>" name="idHotel"/>
                 <input
                     value="<?= (isset($inputData[$name]) && $configField["type"]!="password")?$inputData[$name]:'' ?>"
                     type="<?= $configField["type"]??'' ?>"

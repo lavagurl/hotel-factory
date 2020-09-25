@@ -6,8 +6,8 @@ $inputData = $GLOBALS["_".strtoupper($data["config"]["method"])];
 
 <form method="<?= $data["config"]["method"]?>"
       action="<?= $data["config"]["action"]?>"
-      id="<?= $data["config"]["id"]?>"
-      class="<?= $data["config"]["class"]?>">
+      id=""
+      class="">
 
     <?php foreach ($data["fields"] as $name => $configField):?>
         <div class="form-group row">

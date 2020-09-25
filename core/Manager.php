@@ -25,15 +25,14 @@ class Manager
 
     public function save($objectToSave)
     {
+        
         $objectArray =  $objectToSave->__toArray();
 
-        //print_r($objectArray);
-        //$columnsData = array_values($objectArray);
-        $objectArray = array_filter($objectArray, function($objectToSave)
+        $objectArray = array_filter($objectArray, function($value, $index)
         {
-            return null !== $objectToSave;
-        });
-        //print_r($objectArray);
+            return (null !== $value) || $index == "idHfCompany" ;
+        }, ARRAY_FILTER_USE_BOTH);
+
         $columns = array_keys($objectArray);
         // On met 2 points devant chaque clé du tableau
         $params = array_combine
@@ -57,9 +56,6 @@ class Manager
 
             $sql = "UPDATE ".$this->table." SET ".implode(",", $sqlUpdate)." WHERE id=:id;";
         }
-//        echo($sql);
-//        echo("<br/>");
-//        print_r($params);
         $this->connection->query($sql, $params);
     }
 
@@ -79,6 +75,26 @@ class Manager
         }
 
     }
+
+    public function findNot(int $id): ?array
+    {
+        $sql = "SELECT * FROM $this->table where idHotel != :id AND active = 1";
+
+        $result = $this->connection->query($sql, [':id' => $id]);
+        $rows = $result->getArrayResult();
+
+        $results = array();
+
+        foreach($rows as $row) {
+
+            $object = new $this->class();
+            array_push($results, $object->hydrate($row));
+        }
+
+        return $results;
+
+    }
+
 
     public function findAll(): array
     {
@@ -142,6 +158,48 @@ class Manager
 
     }
 
+    public function findOppositeBy(array $params, array $order = null): array
+    {
+        $results = array();
+
+        $sql = "SELECT * FROM $this->table where ";
+
+        // Select * FROM users WHERE firstname LIKE :firstname ORDER BY id desc
+
+        foreach($params as $key => $value) {
+            if(is_string($value))
+                $comparator = 'LIKE';
+            else
+                $comparator = '!=';
+
+            $sql .= " $key $comparator :$key and";
+            // Select * FROM users WHERE firstname LIKE :firstname and
+            // [":firstname" => 'Fadyl%']
+            // ["firstname" => 'Fadyl%']
+            $params[":$key"] = $value;
+            // ["firstname" => 'Fadyl%', ":firstname" => 'Fadyl%']
+            unset($params[$key]);
+            // [":firstname" => 'Fadyl%']
+        }
+
+        $sql = rtrim($sql, 'and');
+        // Select * FROM users WHERE firstname LIKE :firstname
+
+        if($order) {
+            $sql .= "ORDER BY ". key($order). " ". $order[key($order)];
+        }
+        // Select * FROM users WHERE firstname LIKE :firstname ORDER BY id desc
+        //echo($sql);
+        $result = $this->connection->query($sql, $params);
+        $rows = $result->getArrayResult();
+        foreach($rows as $row) {
+            $object = new $this->class();
+            array_push($results, $object->hydrate($row));
+        }
+        return $results;
+
+    }
+    
     public function count(array $params): int
     {
 
@@ -179,16 +237,6 @@ class Manager
 
 
     }
-
-    /// Faire un find all  qui renvoie un tableau avec toutes les valeurs
-
-    /// Faire un count qui renvoit un entier avec le nombre d'élèment
-
-    /// Faire un findBy qui prend en paramètre un tableau de paramètres (clé = champs db, valeur = valeur en db)
-    /// et qui renvoit un tableau d'objet correspondant à where champsDB1 = ValueDB1 && champsDB2 = ValueDB2
-    /// Ensuite rajouter un deuxième paramètre qui gère l'ordre (order by champsDB valueOrder) valueORDER = ASC or DESC
-    // function findBy(array $params, array $)
-    // Faire un delete function delete(int $id)
 
     protected function sql($sql, $parameters = null)
     {

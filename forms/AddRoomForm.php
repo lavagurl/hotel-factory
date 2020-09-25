@@ -10,7 +10,9 @@ class AddRoomForm {
             "config"=>[
                 "method"=>"POST",
                 "action"=>Helper::getUrl("Room", "create"),
-                "submit"=>"Envoyer"
+                "submit"=>"Envoyer",
+                "id"=>'',
+                "class"=>""
             ],
 
             "fields"=>[
@@ -19,24 +21,28 @@ class AddRoomForm {
                     "placeholder"=>"Nom de la chambre",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "class"=>"form-control form-control-user"
                 ],
                 "description"=>[
                     "type"=>"text",
                     "placeholder"=>"Description de la chambre",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "class"=>"form-control form-control-user"
                 ],
                 "price"=>[
                     "type"=>"number",
                     "placeholder"=>"prix",
                     "required"=>true,
+                    "class"=>"form-control form-control-user"
                 ],
                 "quantity"=>[
                     "type"=>"number",
                     "placeholder"=>"quantité",
                     "required"=>true,
+                    "class"=>"form-control form-control-user"
                 ]
 
 

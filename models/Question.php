@@ -1,7 +1,7 @@
 <?php
 
 namespace HotelFactory\models;
-
+use HotelFactory\core\Helper;
 class Question extends Model
 {
     protected $id;
@@ -67,11 +67,18 @@ class Question extends Model
                 "Id",
                 "Question",
                 "User",
-                "Status"
+                "Réponse"
             ],
 
             "fields"=>[
                 "Question"=>[]
+            ],
+            "config"=>[
+                "id"=>"",
+                "class"=>"",
+                "method"=>"POST",
+                "action"=>Helper::getUrl("Question", "update"),
+                "submit"=>"Envoyer"
             ]
         ];
 

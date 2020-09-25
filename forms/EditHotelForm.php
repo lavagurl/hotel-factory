@@ -10,7 +10,9 @@ class EditHotelForm {
             "config"=>[
                 "method"=>"POST",
                 "action"=>Helper::getUrl("Hotel", "edit"),
-                "submit"=>"Modifier"
+                "submit"=>"Modifier",
+                "id"=>"",
+                "class"=>""
             ],
 
 
@@ -25,28 +27,27 @@ class EditHotelForm {
                     "type"=>"text",
                     "placeholder"=>"Nom de l'Hotel",
                     "required"=>true,
+                    "class"=>"form-control form-control-user input-center"
                 ],
 
                 "address"=>[
                     "type"=>"text",
                     "placeholder"=>"Adresse",
                     "required"=>true,
+                    "class"=>"form-control form-control-user input-center"
                 ],
                 "zipcode"=>[
                     "type"=>"text",
                     "placeholder"=>"Zipcode",
                     "required"=>true,
+                    "class"=>"form-control form-control-user input-center"
                 ],
 
                 "country"=>[
                     "type"=>"text",
                     "placeholder"=>"Prix",
                     "required"=>true,
-                ],
-                "route"=>[
-                    "type"=>"text",
-                    "placeholder"=>"Route",
-                    "required"=>true
+                    "class"=>"form-control form-control-user input-center"
                 ]
             ]
         ];

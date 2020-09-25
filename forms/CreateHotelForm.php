@@ -10,7 +10,9 @@ class CreateHotelForm {
             "config"=>[
                 "method"=>"POST",
                 "action"=>Helper::getUrl("Hotel", "create"),
-                "submit"=>"Enregistrer mon hotel"
+                "submit"=>"Enregistrer mon hotel",
+                "id"=>"",
+                "class"=>""
             ],
 
             "fields"=>[
@@ -19,6 +21,7 @@ class CreateHotelForm {
                     "placeholder"=>"Nom de l'hotel",
                     "class"=>"form-control form-control-user",
                     "id"=>"",
+                    "uniq"=>["table"=>"hotel","column"=>"name"],
                     "required"=>true,
                     "errorMsg"=>"entrez le nom de l'hotel"
                 ],
@@ -27,6 +30,7 @@ class CreateHotelForm {
                     "placeholder"=>"L'adresse de l'hotel",
                     "class"=>"form-control form-control-user",
                     "id"=>"",
+                    "uniq"=>["table"=>"hotel","column"=>"address"],
                     "required"=>true,
                     "errorMsg"=>"entrez l'adresse de l'hotel"
                 ],
@@ -53,10 +57,16 @@ class CreateHotelForm {
                     "id"=>"",
                     "required"=>true,
                     "errorMsg"=>"entrez le pays"
+                ],
+
+                "valid"=>[
+                    "type"=>"number",
+                    "value"=>1,
+                    "hidden"=>"hidden",
+                    "class"=>"form-control form-control-user",
+                    "id"=>"",
+                    "required"=>true
                 ]
-
-
-
             ],
 
         ];

@@ -1,8 +1,6 @@
-<div>
-    <a href="/">Retourner à l'accueil</a>
-</div>
 
-<div>
+<div class="container">
+    <a href="/">Retourner à l'accueil</a>
     <h1>Conditions d'utilisation</h1>
     <h2>L'essentiel</h2>
     <p>

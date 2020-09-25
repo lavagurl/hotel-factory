@@ -5,7 +5,7 @@ $inputData = $GLOBALS["_".strtoupper($data["config"]["method"])];
 ?>
 
 <form method="<?= $data["config"]["method"]?>"
-      action="/add_hotel"
+      action="<?= $data["config"]["action"]?>"
       id="<?= $data["config"]["id"]?>"
       class="<?= $data["config"]["class"]?>">
 
@@ -13,13 +13,14 @@ $inputData = $GLOBALS["_".strtoupper($data["config"]["method"])];
         <div class="form-group row">
             <div class="col-sm-12">
                 <input
-                    value="<?= (isset($inputData[$name]) && $configField["type"]!="password")?$inputData[$name]:'' ?>"
+                    value="<?= (isset($configField["value"]))?$configField["value"]:'' ?>"
                     type="<?= $configField["type"]??'' ?>"
                     name="<?= $name??'' ?>"
                     placeholder="<?= $configField["placeholder"]??'' ?>"
                     class="<?= $configField["class"]??'' ?>"
                     id="<?= $configField["id"]??'' ?>"
-                    <?=(!empty($configField["required"]))?"required='required'":""?> >
+                    <?=(!empty($configField["required"]))?"required='required'":""?>
+                    <?=(!empty($configField["hidden"]))?"hidden='hidden'":""?> >
                 <input hidden="hidden" name="idUser" value="<?= $_SESSION['id'] ?>" />
             </div>
         </div>

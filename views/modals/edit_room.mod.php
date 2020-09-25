@@ -22,6 +22,7 @@ $tab = (array)$room;
                         type="<?= $configField["type"]??'' ?>"
                         name="<?= $name??'' ?>"
                         placeholder="<?= $configField["placeholder"]??'' ?>"
+                        class="<?= $configField["class"]??'' ?>"
                     <?=(!empty($configField["required"]))?"required='required'":""?>
                     <?=(!empty($configField["hidden"]))?"hidden='hidden'":""?>>
             </div>

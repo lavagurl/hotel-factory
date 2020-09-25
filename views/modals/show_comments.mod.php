@@ -6,7 +6,7 @@
 
         foreach ($data["colonnes"] as $name => $colonnes):?>
             <?php if($colonnes != "Id" && $colonnes != "Active"): ?>
-                <td><?= $colonnes ?></td>
+                <td hidden="hidden"><?= $colonnes ?></td>
             <?php else: ?>
                 <td hidden="hidden"><?= $colonnes ?></td>
             <?php endif; ?>

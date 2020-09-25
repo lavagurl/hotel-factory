@@ -5,16 +5,6 @@ use HotelFactory\core\Helper;
 <script src="https://cdn.tiny.cloud/1/uutmuvrof7egv7f2oluc5xpomx8iqt1ukkqdqy03tq8raaye/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 <table>
-    <th>
-        <?php
-        foreach ($data["colonnes"] as $name => $colonnes):?>
-        <?php if($colonnes != "Id"): ?>
-    <td><?= $colonnes ?></td>
-    <?php else: ?>
-        <td hidden="hidden"><?= $colonnes ?></td>
-    <?php endif; ?>
-    <?php endforeach; ?>
-    </th>
     <tbody>
     <?php foreach ($data["fields"] as $categorie => $elements):?>
         <?php foreach ($elements as $key => $fields): ?>
@@ -23,10 +13,10 @@ use HotelFactory\core\Helper;
                     <td></td>
                     <?php foreach ($fields as $key => $field):
                         if($key == 'id'): ?>
-                            <input name='id' type="hidden" value="<?= $fields[$key] ?>">
+                            <input name="id" type="hidden" value="<?= $fields[$key] ?>">
                         <?php else: ?>
 
-                            <textarea name='content' rows="20"><?= $fields[$key] ?></textarea>
+                            <textarea name="content" rows="20"><?= $fields[$key] ?></textarea>
 
                         <?php endif; ?>
 
@@ -44,15 +34,15 @@ use HotelFactory\core\Helper;
         selector: 'textarea',
         language: 'fr_FR',
         plugins: [
-            'advlist autolink link image imagetools lists charmap print preview hr anchor pagebreak spellchecker',
-            'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-            'table template paste help autosave'
+            'advlist autolink link lists charmap print hr anchor pagebreak',
+            'searchreplace wordcount code fullscreen insertdatetime nonbreaking',
+            'table paste help autosave'
         ],
         toolbar: 'undo redo | styleselect | bold italic underline | alignleft aligncenter alignright alignjustify | ' +
-            'bullist numlist outdent indent | link image | preview media fullpage | ' +
+            'bullist numlist outdent indent | ' +
             'forecolor backcolor | help',
         menu: {
-            favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | spellchecker | emoticons'}
+            favs: {title: 'Mes favoris', items: 'code visualaid | searchreplace | emoticons'}
         },
         menubar: 'favs file edit view insert format tools table help',
         content_css: 'css/content.css',

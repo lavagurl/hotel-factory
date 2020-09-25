@@ -9,7 +9,7 @@ class Room extends Model
     protected $description;
     protected $price;
     protected $idHotel;
-
+    protected $status;
 
     /* SETTERS */
 
@@ -35,6 +35,11 @@ class Room extends Model
     public function setIdHotel($idHotel)
     {
         $this->idHotel=$idHotel;
+    }
+
+    public function setStatus($status)
+    {
+        $this->status=$status;
     }
 
     /* GETTERS */
@@ -64,6 +69,10 @@ class Room extends Model
         return $this->idHotel;
     }
 
+    public function getStatus()
+    {
+        return $this->status;
+    }
 
 
     public static function showRoomTable($rooms){
@@ -75,8 +84,8 @@ class Room extends Model
                 "name" => $room->getName(),
                 "description" => $room->getDescription(),
                 "price" => $room->getPrice(),
-                "idHotel" => $room->getIdHotel()
-
+                "idHotel" => $room->getIdHotel(),
+                "status" => $room->getStatus()
             ];
         }
 

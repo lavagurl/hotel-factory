@@ -25,7 +25,8 @@ class EditRoomsForm {
                     "placeholder"=>"Nom de la chambre",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "class"=>"form-control form-control-user"
                 ],
 
                 "description"=>[
@@ -33,12 +34,14 @@ class EditRoomsForm {
                     "placeholder"=>"Description de la chambre",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "class"=>"form-control form-control-user"
                 ],
                 "price"=>[
                     "type"=>"number",
                     "placeholder"=>"Prix",
                     "required"=>true,
+                    "class"=>"form-control form-control-user"
                 ]
             ]
         ];

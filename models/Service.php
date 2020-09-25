@@ -36,6 +36,12 @@ class Service extends Model
     {
         $this->idHotel=$idHotel;
     }
+    
+    public function setStatus($status)
+    {
+        $this->status=$status;
+    }
+    
 
     /* GETTERS */
 
@@ -63,6 +69,11 @@ class Service extends Model
     {
         return $this->idHotel;
     }
+    
+    public function getStatus()
+    {
+        return $this->status;
+    }
 
 
     public static function showServiceTable($services){
@@ -72,7 +83,9 @@ class Service extends Model
                 "id" => $service->getId(),
                 "name" => $service->getName(),
                 "description" => $service->getDescription(),
-                "price" => $service->getPrice()
+                "price" => $service->getPrice(),
+                "status" => $service->getStatus(),
+
             ];
         }
 

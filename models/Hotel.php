@@ -14,6 +14,7 @@ class Hotel extends Model
     protected $status;
     protected $route;
     protected $idUser;
+    protected $valid;
 
 
     /* SETTERS */
@@ -61,6 +62,13 @@ class Hotel extends Model
         $this->idUser=$idUser;
     }
 
+    
+    public function setValid($valid)
+    {
+        $this->valid=$valid;
+    }
+
+
 
     /* GETTERS */
 
@@ -107,6 +115,11 @@ class Hotel extends Model
     public function getIdUser()
     {
         return $this->idUser;
+    }
+    
+    public function getValid()
+    {
+        return $this->valid;
     }
 
 

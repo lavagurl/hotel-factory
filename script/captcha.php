@@ -1,27 +1,25 @@
 <?php
 session_start();
 header("Content-type: image/png");
-$image = imagecreate(400, 100);
 
+$width = 300;
+$hight = 80;
+$image = imagecreate($width, $hight);
 $back = imagecolorallocate($image, rand(0,100), rand(0,100), rand(0,100));
 
 
 $charsAuthorized = "abcdefghijklmnopqrstuvwxyz0123456789";
 $charsAuthorized = str_shuffle($charsAuthorized);
-$lengthCaptcha = rand(6,8);
+$lengthCaptcha = rand(3,6);
 $captcha = substr($charsAuthorized, 0, $lengthCaptcha);
 $_SESSION["captcha"] = $captcha;
 
+$listOfFonts = glob(dirname(__FILE__)."/fonts/*.ttf");
 
-$listOfFonts = glob("fonts/*.ttf");
-$x = rand(30,40);
 for($i=0;$i<$lengthCaptcha;$i++){
-
     $colors[] = imagecolorallocate($image, rand(150,250), rand(150,250), rand(150,250));
 
-    imagettftext($image, rand(20,40), rand(-45,45), $x, rand(35,45), $colors[$i], $listOfFonts[array_rand($listOfFonts)], $captcha[$i]);
-
-    $x += rand(40,50);
+    imagefttext($image, rand($hight/5,$hight/4), rand(0,360), $width/($lengthCaptcha+4)+($width/$lengthCaptcha)*$i, rand($hight/3,$hight*2/3), $colors[$i], $listOfFonts[array_rand($listOfFonts)], $captcha[$i]);
 }
 
 $nbGeo = rand(4,10);
@@ -45,3 +43,5 @@ for($i=0 ; $i<=$nbGeo ; $i++){
 }
 
 imagepng($image);
+
+

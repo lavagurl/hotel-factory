@@ -24,12 +24,16 @@ class Helper
 
     public static function checkRole($role)
     {
-        if($_SESSION['role'] != $role)
+        if($_SESSION['role'] != $role){
             header('Location: /vous-etes-perdu');
+        }
     }
     public static function checkDisconnected()
     {
-        if(!empty($_SESSION['role']))
+        if(isset($_SESSION['role']) && $_SESSION['role'] == 1){
+            header('Location: /dashboard');
+        }elseif(isset($_SESSION['role'])){
             Helper::redirectTo("User","default");
+        }
     }
 }

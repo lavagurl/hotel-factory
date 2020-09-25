@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         Helper::checkDisconnected();
         $commentManager = new CommentManager();
-        $comments = $commentManager->findAll();
+        $comments = $commentManager->findBy(array("idHotel"=>1));
         $configTableComments = Comment::showCommentTable($comments);
         $myView = new View("home", "front");
         $myView->assign("configTableComments", $configTableComments);

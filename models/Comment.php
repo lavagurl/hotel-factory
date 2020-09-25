@@ -1,6 +1,7 @@
 <?php
 
 namespace HotelFactory\models;
+use HotelFactory\core\Helper;
 use HotelFactory\managers\UserManager;
 
 class Comment extends Model
@@ -9,6 +10,7 @@ class Comment extends Model
     protected $message;
     protected $idHfUser;
     protected $active;
+    protected $idHotel;
 
 
     /* SETTERS */
@@ -30,6 +32,12 @@ class Comment extends Model
     public function setActive($active)
     {
         $this->active=$active;
+    }
+
+    
+    public function setIdHotel($idHotel)
+    {
+        $this->idHotel=$idHotel;
     }
 
     /* GETTERS */
@@ -54,10 +62,16 @@ class Comment extends Model
         return $this->active;
     }
 
+    public function getIdHotel()
+    {
+        return $this->idHotel;
+    }
+
 
 
     public static function showCommentTable($comments){
         $userManager = new UserManager();
+
 
         $tabComments = [];
         foreach($comments as $comment){
@@ -67,7 +81,8 @@ class Comment extends Model
                 "id" => $comment->getId(),
                 "message" => $comment->getMessage(),
                 "idHfUser" => $user->getId(),
-                "active" => $comment->getActive()
+                "active" => $comment->getActive(),
+                "idHotel" => $comment->getIdHotel()
 
             ];
         }
@@ -77,7 +92,15 @@ class Comment extends Model
                 "Id",
                 "Message",
                 "User",
-                "Active"
+                "Active",
+                "IdHotel",
+            ],
+
+            "config"=>[
+                "method"=>"POST",
+                "action"=>Helper::getUrl("User", "update"),
+                "class"=>"Comment",
+                "id"=>"",
             ],
 
             "fields"=>[

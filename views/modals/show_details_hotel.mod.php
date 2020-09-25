@@ -13,7 +13,7 @@
                     <?php foreach ($fields as $key => $field):?>
 
                         <?php if($key != "id" && $key != "status"): ?>
-                        <input type="text" value="<?= $fields[$key] ?>" name="<?= $key ?>"/>
+                        <input type="text" value="<?= $fields[$key] ?>" name="<?= $key ?>" class="form-control form-control-user" required="required"/>
                         </br>
                     <?php elseif ($key == "id" ): ?>
                         <td hidden="hidden"><input type="number" value="<?= $fields[$key] ?>" name="<?= $key ?>"/></td>

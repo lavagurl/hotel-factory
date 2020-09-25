@@ -11,7 +11,7 @@ class Message
             "title" => "Inscription",
 
             "body" => [
-                "Votre compte à bien été enregistrer.",
+                "Votre compte a bien été enregistré.",
                 "Merci de vérifier vos emails afin de valider votre compte."
             ]
         ];
@@ -23,7 +23,7 @@ class Message
             "title" => "Inscription",
 
             "body" => [
-                "Votre email à été validé avec succes.",
+                "Votre email a été validé avec succes.",
                 "Vous pouvez maintenant vous connecter à votre espace."
             ]
         ];
@@ -35,7 +35,7 @@ class Message
             "title" => "Mot de passe oublié",
 
             "body" => [
-                "Votre compte à bien été enregistrer.",
+                "Votre compte a bien été enregistré.",
                 "Merci de vérifier vos emails afin de valider votre compte."
             ]
         ];
@@ -47,7 +47,7 @@ class Message
             "title" => "Changement de mot de passe",
 
             "body" => [
-                "Votre mot de passe à été changé avec succes",
+                "Votre mot de passe a été changé avec succes",
                 "Vous pouvez maintenant vous connecter à votre espace avec votre nouveau mot de passe."
             ]
         ];

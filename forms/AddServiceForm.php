@@ -10,7 +10,9 @@ class AddServiceForm {
             "config"=>[
                 "method"=>"POST",
                 "action"=>Helper::getUrl("Service", "create"),
-                "submit"=>"Envoyer"
+                "submit"=>"Envoyer",
+                "id"=>"",
+                "class"=>""
             ],
 
             "fields"=>[
@@ -19,7 +21,9 @@ class AddServiceForm {
                     "placeholder"=>"Nom du service",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "id"=>"",
+                    "class"=>"form-control form-control-user"
                 ],
 
                 "description"=>[
@@ -27,12 +31,16 @@ class AddServiceForm {
                     "placeholder"=>"Description du service",
                     "required"=>true,
                     "rows"=>5,
-                    "cols"=>46
+                    "cols"=>46,
+                    "id"=>'',
+                    "class"=>"form-control form-control-user"
                 ],
                 "price"=>[
                     "type"=>"number",
                     "placeholder"=>"prix",
                     "required"=>true,
+                    "id"=>'',
+                    "class"=>"form-control form-control-user"
                 ]
             ]
         ];

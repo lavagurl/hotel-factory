@@ -75,7 +75,13 @@ class RegisterForm {
                     "class"=>"form-control form-control-user",
                     "id"=>"",
                     "required"=>true,
-                    "errorMsg"=>"Vous devez avoir plus de 18 ans pour vous inscrire"
+                    "errorMsg"=>"Vous devez avoir plus de 18 ans et moins de 120 ans pour vous inscrire"
+                ],
+                "idHfRole"=>[
+                    "type"=>"number",
+                    "value"=>"4",
+                    "required"=>true,
+                    "hidden"=>"hidden"
                 ]
             ]
         ];

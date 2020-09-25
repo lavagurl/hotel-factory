@@ -7,6 +7,8 @@ class Router {
     private $params = [];
     private $routes;
     private $routeCalled;
+    private $baseRouteCalled;
+    private $routeCalledHasRole = false;
 
     public function __construct()
     {
@@ -20,6 +22,10 @@ class Router {
         //include('routes.php');
         $uriParams = explode('?', $_SERVER['REQUEST_URI'], 2);
         $this->routeCalled = $uriParams[0];
+        $uriParams[0] = preg_replace('#/+#','/',$uriParams[0]);
+        $this->baseRouteCalled = "/".explode("/", $uriParams[0])[1];
+        
+        
         //$this->routes = getRoutes();
         if(isset($uriParams[1]))
             $this->params = $this->getParams($uriParams[1]);
@@ -28,16 +34,27 @@ class Router {
 
     public function manageUrl()
     {
+        $accesCheck = false;
+        $routeAccess = false;
+        $baseRouteAccess = false;
         foreach($this->routes as $key => $route)
         {
             //users/1
             // correspond à /users/(?P<id>\d+)
-            if (preg_match("#$key$#i", $this->routeCalled, $params)) {
-                //$params = ['id' => 1]
-                Request::processPathParams($params);
-                $this->processRoute($route);
+            if($this->baseRouteCalled == $this->routeCalled){
+                $accesCheck = $this->getRouteAccess($key, $route, $this->baseRouteCalled, $accesCheck);
+            }else{
+                $routeAccess = $this->getRouteAccess($key, $route, $this->routeCalled, $routeAccess);
+                $baseRouteAccess = $this->getRouteAccess($key, $route, $this->baseRouteCalled, $baseRouteAccess);
+                $accesCheck = (!$baseRouteAccess && $routeAccess && $this->routeCalledHasRole) || $baseRouteAccess;
+            }
 
-                return;
+            if($accesCheck){
+                if (preg_match("#$key$#i", $this->routeCalled, $params)) {
+                    Request::processPathParams($params);
+                    $this->processRoute($route);
+                    return;
+                }
             }
         }
         header('Location: '.Helper::getUrl("Errors","quatreCentQuatre"));
@@ -58,7 +75,7 @@ class Router {
             $controller = new $c();
         } catch( \Throwable $t) {
 
-            die("Le fichier controller n'existe pas");
+            die("Le fichier controller n'existe pas. Fichier: ".$c);
         }
 
         // if(class_exists($c))
@@ -113,5 +130,20 @@ class Router {
         MiddleWareManager::launch('onController');
         $reflection->invokeArgs(new $controllername, $paramsToLaunch);
 
+    }
+
+    private function getRouteAccess($url, $routeTocheck, $route, $returnValue){
+
+        if(preg_match("#$url$#i", $route, $params)){
+            if(isset($routeTocheck["role"])){
+                foreach(explode(";", $routeTocheck["role"]) as $role){
+                    if($this->routeCalled == $route)$this->routeCalledHasRole = true;
+                    if(isset($_SESSION["role"]) && $role == $_SESSION["role"])return true;
+                }
+            }else{
+                return true;
+            }
+        }
+        return $returnValue;
     }
 }

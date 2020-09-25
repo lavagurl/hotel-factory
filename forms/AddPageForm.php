@@ -10,7 +10,7 @@ class AddPageForm
         return[
             "config" =>[
                 "method"=>"POST",
-                "action"=>Helper::getURL("Page", "update"),
+                "action"=>Helper::getURL("Page", "create"),
                 "class"=>"Page",
                 "id"=>"formPage",
                 "submit"=>"Enregistrer la page"
@@ -20,22 +20,24 @@ class AddPageForm
                 "title"=>[
                     "type" => 'text',
                     "name" => 'nomPage',
+                    "placeholder" => 'Titre de la page',
                     "id" =>'nomPage',
-                    "value"=>''
-
+                    "class"=>"form-control form-control-user"
                 ],
                 "address"=>[
                     "type"=> 'text',
                     "name" => 'addressPage',
                     "id" => 'addressPage',
-                    "value"=>''
+                    "uniq"=>["table"=>"page","column"=>"address"],
+                    "hidden"=>"hidden",
+                    "placeholder" => 'Entrez le chemin',
+                    "class"=>"form-control form-control-user"
                 ],
                 "content"=>[
                     "type" => 'text',
                     "placeholder" => 'Le contenu de votre page',
-                    'class' => 'form-control',
+                    "class"=>"form-control form-control-user",
                     "id" => 'contentPage',
-                    "required" => 'true'
                 ]
             ],
         ];

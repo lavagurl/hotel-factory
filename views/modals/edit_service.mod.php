@@ -21,6 +21,7 @@ $tab = (array)$service;
                         value="<?= $tab["\0*\0".$name] ?>"
                         type="<?= $configField["type"]??'' ?>"
                         name="<?= $name??'' ?>"
+                        class="<?= $configField["class"]??'' ?>"
                         placeholder="<?= $configField["placeholder"]??'' ?>"
                     <?=(!empty($configField["required"]))?"required='required'":""?>
                     <?=(!empty($configField["hidden"]))?"hidden='hidden'":""?>>

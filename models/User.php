@@ -1,6 +1,7 @@
 <?php
 
 namespace HotelFactory\models;
+use HotelFactory\core\Helper;
 use HotelFactory\managers\RoleManager;
 
 class User extends Model
@@ -13,7 +14,6 @@ class User extends Model
     protected $birthdate;
     protected $creationDate;
     protected $idHfRole;
-    protected $idHfCompany;
 
 
     /* SETTERS */
@@ -28,10 +28,13 @@ class User extends Model
         $this->email=strtolower($email);
     }
 
-    public function setPassword($password)
-    {
-        $this->password=md5($password);
-        $this->password=sha1($password);
+    public function setPassword($password){
+        if($password!= NULL){
+            $this->password=md5($password);
+            $this->password=sha1($password);
+        }else{
+            $this->password = NULL;
+        }
     }
 
     public function setName($name)
@@ -148,6 +151,13 @@ class User extends Model
                 "Date de naissance",
                 "Date de création",
                 "Role"
+            ],
+
+            "config"=>[
+                "method"=>"POST",
+                "action"=>Helper::getUrl("User", "update"),
+                "class"=>"User",
+                "id"=>"",
             ],
 
             "fields"=>[

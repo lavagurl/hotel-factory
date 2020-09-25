@@ -38,31 +38,10 @@ class QueryBuilder extends Manager
         }
         return $this;
     }
-//    public function queryFrom()
-//    {
-//        $this->selector .= "FROM ".$this->table . " ";
-//    }
-//    public function queryManyFrom($columns)
-//    {
-//        $this->selector .= "FROM ";
-//        if (is_array($columns)) {
-//            $lastElement = count($columns);
-//            $i = 1;
-//            foreach ($columns as $column) {
-//                $column = DB_PREFIXE.$column;
-//                $this->selector .= $column;
-//                if ($i != $lastElement) {
-//                    $this->selector .= ", ";
-//                } else {
-//                    $this->selector .= " ";
-//                }
-//                $i++;
-//            }
-//        } else {
-//            $this->selector .= DB_PREFIXE.$columns . " ";
-//        }
-//        return $this;
-//    }
+
+
+    //public function 
+
 
     public function update($table)
     {
@@ -108,11 +87,11 @@ class QueryBuilder extends Manager
         return $this;
     }
 
-    public function queryOrderBy($column, $order)
-    {
-        $this->order .= " " . $column . " " . $order . " ";
-        return $this;
-    }
+/*
+SELECT distinct(name), description, idHotel, price, status FROM htlfac157896_room WHERE idHotel = 11;
+
+
+*/
 
     public function queryGroupBy($group)
     {

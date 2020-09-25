@@ -10,7 +10,6 @@ class Validator
     public function checkForm($configForm, $data)
     {
         $errosMsg = [];
-
         if (count($configForm["fields"]) == count($data)) {
             foreach ($configForm["fields"] as $key => $config) {
                 $this->$key = $data[$key];
@@ -19,8 +18,8 @@ class Validator
                 if (!array_key_exists($key, $data) || ($config["required"] && empty($data[$key]))) {
                     return ["Tentative de hack !!!"];
                 }
-                $method = 'check' . ucfirst($key);
-                if (method_exists(get_called_class(), $method)) {
+                $method = 'check' . ucfirst($key); //"check" avec le name des inputs du formulaire
+                if (method_exists(get_called_class(), $method)) { //Vérifie que la méthode existe dans la classe appelée
                     if (!$this->$method($data[$key], $config)) {
                         $errosMsg[$key] = $config["errorMsg"];
                     }
@@ -46,11 +45,12 @@ class Validator
 
     private function checkEmail($email, $config)
     {
-        if(array_key_exists("uniq",$config))
-            if(!$this->uniq($email,$config["uniq"]))
+        if (array_key_exists("uniq", $config))
+            if (!$this->uniq($email, $config["uniq"])) {
                 return false;
-
-        return filter_var($email, FILTER_VALIDATE_EMAIL);
+            } else {
+                return filter_var($email, FILTER_VALIDATE_EMAIL);
+            }
     }
 
     private function checkPassword($password)
@@ -70,22 +70,31 @@ class Validator
 
     private function checkBirthdate($birthdate)
     {
-        $birthdate = new \DateTime($birthdate);
-        $date = new \DateTime("now");
-        $date->modify('-18 years');
-        return $date >= $birthdate;
+        try {
+            $birthdate = new \DateTime($birthdate);
+            $date18 = new \DateTime("now");
+            $date18->modify('-18 years');
+
+            $date120 = new \DateTime("now");
+            $date120->modify('-120 years');
+        
+            return $date18 >= $birthdate && $date120 <= $birthdate;
+        } catch( \Throwable $t) {
+            return false;
+        }
+
     }
 
-    private function uniq($data,$table)
+    public function uniq($data, $table)
     {
         $requete = new QueryBuilder(User::class, $table["table"]);
-        $requete->querySelect($table["column"]);
+        $requete->querySelect("*");
         $requete->queryWhere($table["column"], "=", $data);
         $result = $requete->queryGget();
-        if($result == $data)
+        if($result && in_array($data, $result)){
             return false;
-        return true;
+        } else {
+            return true;
+        }
     }
-
-
 }
